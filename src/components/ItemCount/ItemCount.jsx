@@ -6,7 +6,7 @@ export function ItemCount({ stock, initial, onAdd }) {
      const [count, setCount] = useState(initial);
 
      const increaseCount = () => {
-          if (count < Math.floor(stock)) setCount(count + 1); 
+          if (count < Math.floor(stock)) setCount(count + 1);
      };
 
      const decreaseCount = () => {
@@ -15,11 +15,11 @@ export function ItemCount({ stock, initial, onAdd }) {
 
      return (
           <div className="item-count-container">
-               <button className="count-button" onClick={decreaseCount}>-</button>
-               <span className="count-display">{count}</span>
-               <button className="count-button" onClick={increaseCount}>+</button>
+               <button className="button count-button" onClick={decreaseCount}>-</button>
+               <span className="counter count-display">{count}</span>
+               <button className="button count-button" onClick={increaseCount}>+</button>
                <button
-                    className="add-to-cart-button"
+                    className="button"
                     onClick={() => onAdd(count)}
                     disabled={count === 0}
                >

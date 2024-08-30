@@ -9,7 +9,7 @@ export const CartWidget = () => {
     return (
         <div className="cart-widget-container">
             <img src={cart} alt="Shopping cart icon" />
-            <span className="cart-item-counter">{itemCount}</span>
+            <span className="counter">{itemCount}</span>
         </div>
     );
 }

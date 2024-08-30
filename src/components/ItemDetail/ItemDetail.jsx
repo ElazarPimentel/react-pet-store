@@ -8,14 +8,14 @@ export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
      };
 
      return (
-          <div className="item-detail">
-               <div className="item">
+          <div className="card">
+               <div className="card">
                     <img src={imageUrl} alt={name} className="item-image" />
                     <h2>{name}</h2>
                     <p>{description}</p>
                     <span className="item-price-display">Precio: {price}</span>
                     <p className="item-stock">Stock disponible: {Math.floor(stock)}</p>
-                    <ItemCount stock={Math.floor(stock)} initial={1} onAdd={handleAdd} /> 
+                    <ItemCount stock={Math.floor(stock)} initial={1} onAdd={handleAdd} />
                </div>
           </div>
      );
