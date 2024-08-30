@@ -6,7 +6,7 @@ export function ItemCount({ stock, initial, onAdd }) {
      const [count, setCount] = useState(initial);
 
      const increaseCount = () => {
-          if (count < stock) setCount(count + 1);
+          if (count < Math.floor(stock)) setCount(count + 1); // Ensure whole numbers
      };
 
      const decreaseCount = () => {
@@ -14,11 +14,17 @@ export function ItemCount({ stock, initial, onAdd }) {
      };
 
      return (
-          <div>
-               <button onClick={decreaseCount}>-</button>
-               <span>{count}</span>
-               <button onClick={increaseCount}>+</button>
-               <button onClick={() => onAdd(count)} disabled={count === 0}>Agregar al carrito</button>
+          <div className="item-count-container">
+               <button className="count-button" onClick={decreaseCount}>-</button>
+               <span className="count-display">{count}</span>
+               <button className="count-button" onClick={increaseCount}>+</button>
+               <button
+                    className="add-to-cart-button"
+                    onClick={() => onAdd(count)}
+                    disabled={count === 0}
+               >
+                    Agregar al carrito
+               </button>
           </div>
      );
 }

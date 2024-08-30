@@ -8,8 +8,10 @@ export function Item({ id, name, description, price, imageUrl }) {
                <img src={imageUrl} alt={name} />
                <h2>{name}</h2>
                <p>{description}</p>
-               <span>{price}</span>
-               <Link to={`/item/${id}`} className="btn-primary">Ver detalles</Link>
+               <div className="item-footer">
+                    <span className="item-price-display">{Math.round(price)}</span>
+                    <Link to={`/item/${id}`} className="btn-primary">Ver detalles</Link>
+               </div>
           </div>
      );
 }

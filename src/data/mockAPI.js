@@ -28,7 +28,6 @@ const products = [
         imageUrl: '/product-images/dog-toyA003.webp',
         stock: 30,
     },
-
     {
         id: '4',
         category: 'Medicamentos',
@@ -56,7 +55,6 @@ const products = [
         imageUrl: '/product-images/cat-dewormerA003.webp',
         stock: 20,
     },
-
     {
         id: '7',
         category: 'Comida',
