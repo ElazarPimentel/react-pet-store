@@ -42,16 +42,28 @@ body {
 
 .nav-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 0.5rem 1rem;
     border-radius: var(--border-radius);
     border: 0.1rem solid var(--lighter-color);
+    background-color: var(--secondary-bg-color);
 }
 
 .navbar-logo {
     height: 5rem;
     margin-right: 1.2rem;
+}
+
+.nav-link {
+    color: var(--lightest-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--lighter-color);
 }
 
 .nav-links {
@@ -62,18 +74,62 @@ body {
 .cart-widget-container {
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .cart-item-counter {
-    font-size: 2.9rem;
-    margin-left: 0.8rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    background-color: var(--secondary-bg-color);
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
     border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.9rem;
+}
+
+.item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+}
+
+.item {
+    background-color: var(--secondary-bg-color);
+    color: var(--primary-text-color);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.item img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+.btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: var(--light-primary-color);
+    color: var(--lightest-color);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--lighter-color);
 }
 
 button {
@@ -114,19 +170,4 @@ h2 {
 .not-found-container p {
     margin: 1rem 0;
     color: var(--lighter-color);
-}
-
-.btn-primary {
-    background-color: var(--light-primary-color);
-    color: var(--lightest-color);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--lighter-color);
 }

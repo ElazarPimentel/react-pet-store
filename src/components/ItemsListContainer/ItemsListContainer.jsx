@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducts, getProductsByCategory } from '../../data/mockAPI';
-import { ItemList } from '../ItemList/ItemList'; // Import using named export
+import { ItemList } from '../ItemList/ItemList'; 
 
 export function ItemsListContainer({ greeting }) {
     const [products, setProducts] = useState([]);

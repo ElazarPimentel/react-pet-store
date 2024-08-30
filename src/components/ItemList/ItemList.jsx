@@ -4,7 +4,7 @@ import { Item } from '../Item/Item';
 
 export function ItemList({ products }) {
     return (
-        <div>
+        <div className="item-list">
             {products.map(product => (
                 <Item key={product.id} {...product} />
             ))}

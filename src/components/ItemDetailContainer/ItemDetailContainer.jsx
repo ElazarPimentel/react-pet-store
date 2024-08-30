@@ -1,25 +1,23 @@
-// filename: src/components/ItemsListContainer/ItemsListContainer.jsx
+// filename: src/components/ItemDetailContainer/ItemDetailContainer.jsx
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProducts, getProductsByCategory } from '../../data/mockAPI';
-import { ItemList } from '../ItemList/ItemList'; // Import using named export
+import { getProductById } from '../../data/mockAPI';
+import { ItemDetail } from '../ItemDetail/ItemDetail';
 
-export function ItemsListContainer({ greeting }) {
-    const [products, setProducts] = useState([]);
-    const { categoryId } = useParams();
+export function ItemDetailContainer() {
+    const [product, setProduct] = useState(null);
+    const { itemId } = useParams();
 
     useEffect(() => {
-        const fetchProducts = categoryId ? getProductsByCategory : getProducts;
-        fetchProducts(categoryId)
-            .then(setProducts)
+        getProductById(itemId)
+            .then(setProduct)
             .catch(console.error);
-    }, [categoryId]);
+    }, [itemId]);
 
     return (
         <div className="ui-container">
-            <h1>{greeting}</h1>
-            <ItemList products={products} /> {/* Use ItemList component */}
+            {product ? <ItemDetail {...product} /> : <p>Loading...</p>}
         </div>
     );
 }

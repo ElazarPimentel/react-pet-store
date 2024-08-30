@@ -1,4 +1,4 @@
-// filename: src/components/CartWidget/CartWidget.jsx
+// src/components/CartWidget/CartWidget.jsx
 
 import cart from './assets/cart.svg';
 
