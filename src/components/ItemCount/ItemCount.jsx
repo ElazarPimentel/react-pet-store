@@ -6,7 +6,7 @@ export function ItemCount({ stock, initial, onAdd }) {
      const [count, setCount] = useState(initial);
 
      const increaseCount = () => {
-          if (count < Math.floor(stock)) setCount(count + 1); // Ensure whole numbers
+          if (count < Math.floor(stock)) setCount(count + 1); 
      };
 
      const decreaseCount = () => {
