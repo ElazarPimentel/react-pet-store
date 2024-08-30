@@ -17,7 +17,7 @@ export function ItemDetailContainer() {
 
     return (
         <div className="ui-container">
-            {product ? <ItemDetail {...product} /> : <p>Loading...</p>}
+            {product ? <ItemDetail {...product} /> : <p>Cargando...</p>}
         </div>
     );
 }

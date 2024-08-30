@@ -18,7 +18,7 @@ export function ItemCount({ stock, initial, onAdd }) {
                <button onClick={decreaseCount}>-</button>
                <span>{count}</span>
                <button onClick={increaseCount}>+</button>
-               <button onClick={() => onAdd(count)}>Add to Cart</button>
+               <button onClick={() => onAdd(count)} disabled={count === 0}>Agregar al carrito</button>
           </div>
      );
 }

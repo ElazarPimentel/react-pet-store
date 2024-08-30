@@ -9,11 +9,13 @@ export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
 
      return (
           <div className="item-detail">
-               <img src={imageUrl} alt={name} />
-               <h2>{name}</h2>
-               <p>{description}</p>
-               <span>Price: {price}</span>
-               <ItemCount stock={stock} initial={1} onAdd={handleAdd} />
+               <div className="item">
+                    <img src={imageUrl} alt={name} className="item-image" />
+                    <h2>{name}</h2>
+                    <p>{description}</p>
+                    <span className="item-price">Precio: {price}</span>
+                    <ItemCount stock={stock} initial={1} onAdd={handleAdd} />
+               </div>
           </div>
      );
 }

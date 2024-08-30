@@ -10,6 +10,23 @@
     --text-color: var(--primary-text-color);
     --border-radius: 0.5rem;
     --lightest-color: white;
+    --font-size: 16px;
+    --line-height: 1.6;
+    --container-width: 99%;
+    --container-max-width: 80%;
+    --container-margin: 1rem auto;
+    --padding-standard: 20px;
+    --margin-standard: 1rem 0;
+    --margin-large: 2rem auto;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-standard: 0 4px 8px var(--box-shadow-color);
+    --btn-padding: 0.5rem 1rem;
+    --btn-transition: background-color 0.3s ease;
+    --media-breakpoint: 768px;
+    --img-width: 100%;
+    --img-height-auto: auto;
+    --cart-background-color: red;
+    --cart-color: white;
 }
 
 * {
@@ -18,25 +35,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: var(--font-size);
 }
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    line-height: var(--line-height);
 }
 
 .ui-container {
-    width: 99%;
-    margin: 1rem auto;
+    width: var(--container-width);
+    margin: var(--container-margin);
     border-radius: var(--border-radius);
     background-color: var(--dark-secondary-color);
     border: 0.1rem solid var(--lighter-color);
 }
 
-@media (min-width: 768px) {
+@media (min-width: var(--media-breakpoint)) {
     .ui-container {
-        width: 80%;
+        width: var(--container-max-width);
     }
 }
 
@@ -55,20 +72,20 @@ body {
     margin-right: 1.2rem;
 }
 
+.nav-links {
+    display: flex;
+    gap: 1.8rem;
+}
+
 .nav-link {
     color: var(--lightest-color);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+    padding: var(--btn-padding);
+    transition: color var(--btn-transition);
 }
 
 .nav-link:hover {
     color: var(--lighter-color);
-}
-
-.nav-links {
-    display: flex;
-    gap: 1.8rem;
 }
 
 .cart-widget-container {
@@ -81,8 +98,8 @@ body {
     position: absolute;
     top: -10px;
     right: -10px;
-    background-color: red;
-    color: white;
+    background-color: var(--cart-background-color);
+    color: var(--cart-color);
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
@@ -97,22 +114,32 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-    padding: 20px;
+    padding: var(--padding-standard);
 }
 
-.item {
+.item,
+.item-detail {
     background-color: var(--secondary-bg-color);
     color: var(--primary-text-color);
-    padding: 20px;
+    padding: var(--padding-standard);
     border-radius: var(--border-radius);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    box-shadow: var(--shadow-standard);
+    width: 80%;
+    max-width: 400px;
     text-align: center;
+    margin: var(--margin-large);
 }
 
-.item img {
-    width: 100%;
+.item img,
+.item-detail img {
+    width: var(--img-width);
+    height: var(--img-height-auto);
     border-radius: var(--border-radius);
+}
+
+.item-price {
+    display: block;
+    margin: 10px 0;
 }
 
 .btn-primary {
@@ -120,12 +147,12 @@ body {
     margin-top: 10px;
     background-color: var(--light-primary-color);
     color: var(--lightest-color);
-    padding: 0.5rem 1rem;
+    padding: var(--btn-padding);
     text-align: center;
     border-radius: var(--border-radius);
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: var(--btn-transition);
 }
 
 .btn-primary:hover {
@@ -136,10 +163,10 @@ button {
     background-color: var(--light-primary-color);
     color: var(--lightest-color);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: var(--btn-padding);
     border-radius: var(--border-radius);
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: var(--btn-transition);
 }
 
 button:hover {
@@ -149,11 +176,11 @@ button:hover {
 h1 {
     font-size: 1.6rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: var(--margin-standard);
 }
 
 h2 {
-    margin: 1rem 0;
+    margin: var(--margin-standard);
 }
 
 .not-found-container {
@@ -168,6 +195,6 @@ h2 {
 }
 
 .not-found-container p {
-    margin: 1rem 0;
+    margin: var(--margin-standard);
     color: var(--lighter-color);
 }

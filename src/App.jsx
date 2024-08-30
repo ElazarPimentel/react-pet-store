@@ -12,7 +12,7 @@ export function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path="/" element={<ItemsListContainer greeting="¡Bienvenidos! acá ven toods nuestros productos" />} />
+          <Route path="/" element={<ItemsListContainer greeting="¡Bienvenidos! Aquí están todos nuestros productos." />} />
           <Route path="/category/:categoryId" element={<ItemsListContainer />} />
           <Route path="/item/:itemId" element={<ItemDetailContainer />} />
           <Route path="*" element={<NotFound />} />

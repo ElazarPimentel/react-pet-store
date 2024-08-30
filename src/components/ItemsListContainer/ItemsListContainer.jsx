@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducts, getProductsByCategory } from '../../data/mockAPI';
-import { ItemList } from '../ItemList/ItemList'; 
+import { ItemList } from '../ItemList/ItemList';
 
 export function ItemsListContainer({ greeting }) {
     const [products, setProducts] = useState([]);
@@ -13,13 +13,13 @@ export function ItemsListContainer({ greeting }) {
         const fetchProducts = categoryId ? getProductsByCategory : getProducts;
         fetchProducts(categoryId)
             .then(setProducts)
-            .catch(console.error);
+            .catch(error => console.error('Failed to fetch products:', error));
     }, [categoryId]);
 
     return (
         <div className="ui-container">
             <h1>{greeting}</h1>
-            <ItemList products={products} /> 
+            <ItemList products={products} />
         </div>
     );
 }
