@@ -2,7 +2,7 @@
 
 import { ItemCount } from '../ItemCount/ItemCount';
 
-export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
+export function ItemDetail({ name, description, price, imageUrl, stock }) {
      const handleAdd = (quantity) => {
           console.log(`Added ${quantity} of ${name} to cart.`);
      };

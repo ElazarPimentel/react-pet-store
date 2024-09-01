@@ -4,7 +4,7 @@ import { useState } from 'react';
 import cart from './assets/cart.svg';
 
 export const CartWidget = () => {
-    const [itemCount, setItemCount] = useState(0);
+    const [itemCount] = useState(0);
 
     return (
         <div className="cart-widget-container">

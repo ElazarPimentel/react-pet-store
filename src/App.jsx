@@ -7,6 +7,8 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { NotFound } from './components/NotFound/NotFound';
 
 export function App() {
+
+
   return (
     <div className="App">
       <BrowserRouter>
