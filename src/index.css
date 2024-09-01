@@ -21,7 +21,6 @@
     --btn-transition: background-color 0.3s ease;
     --img-width: 100%;
     --img-height-auto: auto;
-    --cart-background-color: red;
     --cart-color: white;
     --nav-button-spacing: 1.5rem;
     --button-margin: 5px;
@@ -90,18 +89,13 @@ body {
 }
 
 .counter {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    background-color: var(--cart-background-color);
-    color: var(--cart-color);
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    color: var(--lighter-color);
+    border-radius: 50%;
+    margin-left: 0.5rem;
 }
 
 .card {
@@ -171,6 +165,31 @@ p {
 .button:hover {
     background-color: var(--lighter-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.item-count-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.count-button {
+    padding: var(--count-button-padding);
+    font-size: var(--count-display-font-size);
+}
+
+.count-display {
+    color: var(--lightest-color);
+
 }
 
 .not-found-container {

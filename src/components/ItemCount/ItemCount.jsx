@@ -1,12 +1,23 @@
 // filename: src/components/ItemCount/ItemCount.jsx
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-export function ItemCount({ stock, initial, onAdd }) {
+export function ItemCount({ stock, initial, onAdd, productId }) {
      const [count, setCount] = useState(initial);
 
+     useEffect(() => {
+          const savedCount = localStorage.getItem(`itemCount-${productId}`);
+          if (savedCount) {
+               setCount(Number(savedCount));
+          }
+     }, [productId]);
+
+     useEffect(() => {
+          localStorage.setItem(`itemCount-${productId}`, count);
+     }, [count, productId]);
+
      const increaseCount = () => {
-          if (count < Math.floor(stock)) setCount(count + 1);
+          if (count < stock) setCount(count + 1);
      };
 
      const decreaseCount = () => {
@@ -15,11 +26,13 @@ export function ItemCount({ stock, initial, onAdd }) {
 
      return (
           <div className="item-count-container">
-               <button className="button count-button" onClick={decreaseCount}>-</button>
-               <span className="counter count-display">{count}</span>
-               <button className="button count-button" onClick={increaseCount}>+</button>
+               <div className="counter-controls">
+                    <button className="button count-button" onClick={decreaseCount}>-</button>
+                    <span className="counter count-display">{count}</span>
+                    <button className="button count-button" onClick={increaseCount}>+</button>
+               </div>
                <button
-                    className="button"
+                    className="button add-to-cart-button"
                     onClick={() => onAdd(count)}
                     disabled={count === 0}
                >
