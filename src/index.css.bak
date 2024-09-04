@@ -78,6 +78,13 @@ body {
     transition: background-color var(--btn-transition);
 }
 
+.nav-link.active {
+    color: var(--lightest-color);
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid var(--accent-color);
+}
+
 .nav-link:hover {
     background-color: var(--accent-color);
 }

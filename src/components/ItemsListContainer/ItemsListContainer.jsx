@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getProducts, getProductsByCategory } from '../../data/mockAPI';
 import { ItemList } from '../ItemList/ItemList';
+import styles from './ItemsListContainer.module.css';
 
 export function ItemsListContainer({ greeting }) {
     const [products, setProducts] = useState([]);
@@ -17,7 +18,7 @@ export function ItemsListContainer({ greeting }) {
     }, [categoryId]);
 
     return (
-        <div className="ui-container">
+        <div className={styles.uiContainer}>
             <h1>{greeting}</h1>
             <ItemList products={products} />
         </div>

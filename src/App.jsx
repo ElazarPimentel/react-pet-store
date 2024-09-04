@@ -3,8 +3,9 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavBar } from './components/NavBar/NavBar';
 import { ItemsListContainer } from './components/ItemsListContainer/ItemsListContainer';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'; // Corrected Import
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer'; 
 import { NotFound } from './components/NotFound/NotFound';
+import './shared.module.css';
 
 export function App() {
 

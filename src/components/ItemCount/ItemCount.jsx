@@ -1,6 +1,7 @@
 // filename: src/components/ItemCount/ItemCount.jsx
 
 import { useState, useEffect } from 'react';
+import styles from './ItemCount.module.css';
 
 export function ItemCount({ stock, initial, onAdd, productId }) {
      const [count, setCount] = useState(initial);
@@ -25,14 +26,14 @@ export function ItemCount({ stock, initial, onAdd, productId }) {
      };
 
      return (
-          <div className="item-count-container">
-               <div className="counter-controls">
-                    <button className="button count-button" onClick={decreaseCount}>-</button>
-                    <span className="counter count-display">{count}</span>
-                    <button className="button count-button" onClick={increaseCount}>+</button>
+          <div className={styles.itemCountContainer}>
+               <div className={styles.counterControls}>
+                    <button className={`${styles.button} ${styles.countButton}`} onClick={decreaseCount}>-</button>
+                    <span className={`${styles.counter} ${styles.countDisplay}`}>{count}</span>
+                    <button className={`${styles.button} ${styles.countButton}`} onClick={increaseCount}>+</button>
                </div>
                <button
-                    className="button add-to-cart-button"
+                    className={`${styles.button} ${styles.addToCartButton}`}
                     onClick={() => onAdd(count)}
                     disabled={count === 0}
                >
