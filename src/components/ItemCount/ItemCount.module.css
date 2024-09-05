@@ -1,3 +1,5 @@
+/* filename: src/components/ItemCount/ItemCount.module.css */
+
 .itemCountContainer {
     display: flex;
     flex-direction: column;

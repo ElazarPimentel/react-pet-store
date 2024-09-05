@@ -19,7 +19,7 @@ export function ItemsListContainer({ greeting }) {
 
     return (
         <div className={styles.uiContainer}>
-            <h1>{greeting}</h1>
+            <h1 className={styles.greeting}>{greeting}</h1> 
             <ItemList products={products} />
         </div>
     );

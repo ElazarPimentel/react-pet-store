@@ -1,4 +1,26 @@
-// filename: src/data/mockAPI.js
+export function getProducts() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products);
+        }, 500);
+    });
+}
+
+export function getProductsByCategory(category) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.filter(product => product.category === category));
+        }, 500);
+    });
+}
+
+export function getProductById(id) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(products.find(product => product.id === id));
+        }, 500);
+    });
+}
 
 const products = [
     {
@@ -84,26 +106,3 @@ const products = [
     },
 ];
 
-export function getProducts() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products);
-        }, 500);
-    });
-}
-
-export function getProductsByCategory(category) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products.filter(product => product.category === category));
-        }, 500);
-    });
-}
-
-export function getProductById(id) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products.find(product => product.id === id));
-        }, 500);
-    });
-}
