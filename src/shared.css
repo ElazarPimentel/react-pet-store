@@ -1,62 +1,44 @@
-/* filename: src/shared.module.css */
-
-:root {
-    --primary-bg-color: #1a1625;
-    --secondary-bg-color: #2f2b3a;
-    --dark-secondary-color: #46424f;
-    --accent-color: #5e5a66;
-    --lighter-color: #76737e;
-    --primary-text-color: #908d96;
-    --text-color: var(--primary-text-color);
-    --border-radius: 0.5rem;
-    --lightest-color: white;
-    --font-size: 16px;
-    --line-height: 1.6;
-    --container-width: 99%;
-    --container-max-width: 80%;
-    --container-margin: 1rem auto;
-    --padding-standard: 0.5rem;
-    --margin-standard: 1rem 0;
-    --margin-large: 2rem auto;
-    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --btn-padding: 0.5rem 1rem;
-    --btn-transition: background-color 0.3s ease;
-    --img-width: 100%;
-    --img-height-auto: auto;
-    --cart-color: white;
-    --nav-button-spacing: 1.5rem;
-    --button-margin: 5px;
-    --count-button-padding: 0.3rem 0.6rem;
-    --count-display-font-size: 1rem;
-}
+/* filename: src/shared.css */
 
 * {
-    color: var(--text-color);
-    background-color: var(--primary-bg-color);
+    color: #908d96;
+    /* Hardcoded primary text color */
+    background-color: #1a1625;
+    /* Hardcoded primary background color */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: var(--font-size);
+    font-size: 16px;
+    /* Hardcoded font size */
 }
 
 body {
     font-family: Arial, sans-serif;
-    line-height: var(--line-height);
+    line-height: 1.6;
+    /* Hardcoded line height */
 }
 
 .ui-container {
-    width: var(--container-max-width);
-    margin: var(--container-margin);
-    border-radius: var(--border-radius);
-    background-color: var(--dark-secondary-color);
-    border: 0.1rem solid var(--lighter-color);
-    padding: var(--padding-standard);
+    width: 80%;
+    /* Hardcoded container max width */
+    margin: 1rem auto;
+    /* Hardcoded margin */
+    border-radius: 0.5rem;
+    /* Hardcoded border radius */
+    background-color: #46424f;
+    /* Hardcoded dark secondary color */
+    border: 0.1rem solid #76737e;
+    /* Hardcoded lighter border color */
+    padding: 0.5rem;
+    /* Hardcoded padding */
 }
 
-
 .nav-link.active {
-    color: var(--lightest-color);
+    color: white;
+    /* Hardcoded lightest color */
     font-weight: bold;
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
-    border-bottom: 2px solid var(--accent-color);
+    /* Hardcoded box-shadow */
+    border-bottom: 2px solid #5e5a66;
+    /* Hardcoded accent color */
 }
