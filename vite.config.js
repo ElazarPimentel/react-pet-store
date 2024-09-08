@@ -1,26 +1,17 @@
-// vite.config.js
-
+// filename: vite.config.js
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
-  build: {
-    rollupOptions: {
-      output: {
-        assetFileNames: 'assets/[name]-[hash][extname]',
-      },
+  resolve: {
+    alias: {
+      '@': '/src',  // This alias is correct and simplifies imports.
     },
   },
   css: {
     modules: {
-      localsConvention: 'camelCase',
-    },
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+      localsConvention: 'camelCase',  // This is also fine for CSS modules.
     },
   },
 });

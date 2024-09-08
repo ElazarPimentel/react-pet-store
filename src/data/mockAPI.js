@@ -1,23 +1,16 @@
-export function getProducts() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products);
-        }, 500);
-    });
-}
+// src/data/mockAPI.js
 
-export function getProductsByCategory(category) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(products.filter(product => product.category === category));
-        }, 500);
-    });
-}
 
-export function getProductById(id) {
+export function getProducts({ categoryId = null, productId = null } = {}) {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(products.find(product => product.id === id));
+            if (productId) {
+                resolve(products.find(product => product.id === productId));
+            } else if (categoryId) {
+                resolve(products.filter(product => product.category === categoryId));
+            } else {
+                resolve(products);
+            }
         }, 500);
     });
 }

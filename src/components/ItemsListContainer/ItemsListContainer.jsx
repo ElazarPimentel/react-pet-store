@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProducts, getProductsByCategory } from '../../data/mockAPI';
+import { fetchAPI } from '../../services/apiService';
 import { ItemList } from '../ItemList/ItemList';
 import styles from './ItemsListContainer.module.css';
 
@@ -11,15 +11,14 @@ export function ItemsListContainer({ greeting }) {
     const { categoryId } = useParams();
 
     useEffect(() => {
-        const fetchProducts = categoryId ? getProductsByCategory : getProducts;
-        fetchProducts(categoryId)
+        fetchAPI({ categoryId })
             .then(setProducts)
             .catch(error => console.error('Failed to fetch products:', error));
     }, [categoryId]);
 
     return (
         <div className={styles.uiContainer}>
-            <h1 className={styles.greeting}>{greeting}</h1> 
+            <h1 className={styles.greeting}>{greeting}</h1>
             <ItemList products={products} />
         </div>
     );

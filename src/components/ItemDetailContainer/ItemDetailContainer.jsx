@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductById } from '../../data/mockAPI';
+import { fetchAPI } from '../../services/apiService'; 
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
 export function ItemDetailContainer() {
@@ -10,7 +10,7 @@ export function ItemDetailContainer() {
     const { itemId } = useParams();
 
     useEffect(() => {
-        getProductById(itemId)
+        fetchAPI({ productId: itemId })
             .then(setProduct)
             .catch(console.error);
     }, [itemId]);
