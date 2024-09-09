@@ -1,5 +1,8 @@
 // filename: ./src/services/apiService.js
 
+
+// No se usò exponential backoff sino linial para comodidad de quien pruebe la app. En exponencial se usarìa 500 ms, 1000 ms, 2000 ms, 4000 ms etc, dependiendo de criterio de cliente o PM uncon con maxAttempts.
+
 import { getProducts } from '../data/mockAPI';
 
 export const fetchAPI = async ({ categoryId = null, productId = null } = {}) => {
