@@ -1,19 +1,23 @@
-// src/data/mockAPI.js
+// filename: ./src/data/mockAPI.js
 
+
+let forceDelaySeconds = 0;// Forzar prueba de exponential back off. 0 inmediato. hasta 3 sigue intentando con back off. Màs de 3 time out. 
+const forceDelay = forceDelaySeconds * 1000;
 
 export function getProducts({ categoryId = null, productId = null } = {}) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            if (productId) {
-                resolve(products.find(product => product.id === productId));
-            } else if (categoryId) {
-                resolve(products.filter(product => product.category === categoryId));
-            } else {
-                resolve(products);
-            }
-        }, 500);
-    });
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      if (productId) {
+        resolve(products.find(product => product.id === productId));
+      } else if (categoryId) {
+        resolve(products.filter(product => product.category === categoryId));
+      } else {
+        resolve(products);
+      }
+    }, forceDelay);
+  });
 }
+
 
 const products = [
     {
