@@ -9,17 +9,18 @@ import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 export function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
   const [status, setStatus] = useState('loading');
-  const { itemId } = useParams();
+  const { itemId } = useParams();  
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchAPI({ productId: itemId });
+      const productId = Number(itemId);  
+      const result = await fetchAPI({ productId });
 
       if (result.fail) {
-        setStatus('fail');  
+        setStatus('fail');
       } else {
         setProduct(result);
-        setStatus('success');  
+        setStatus('success');
       }
     };
 
@@ -27,7 +28,7 @@ export function ItemDetailContainer() {
   }, [itemId]);
 
   return status === 'loading' ? (
-    <p>Loading...</p>
+    <p>Cargando...</p>
   ) : status === 'fail' ? (
     <ErrorMessage />
   ) : (

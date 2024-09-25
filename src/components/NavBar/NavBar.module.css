@@ -11,6 +11,13 @@
     height: 5rem;
 }
 
+.navbarLogoLink {
+    background-color: var(--secondary-bg-color); /* Apply background to the <a> */
+    padding: 0; /* Reset any default padding */
+    margin: 0; /* Reset any default margin */
+    display: inline-block; /* Ensure it fits the image size */
+}
+
 .navLinks {
     display: flex;
     gap: var(--nav-button-spacing);

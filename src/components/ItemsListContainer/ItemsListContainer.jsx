@@ -1,4 +1,4 @@
-// filename: ./src/components/ItemsListContainer/ItemsListContainer.jsx
+// filename: src/components/ItemsListContainer/ItemsListContainer.jsx
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -15,20 +15,18 @@ export function ItemsListContainer({ greeting }) {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetchAPI({ categoryId });
-
       if (result.fail) {
-        setStatus('fail');  
+        setStatus('fail');
       } else {
         setProducts(result);
-        setStatus('success'); 
+        setStatus('success');
       }
     };
-
     fetchData();
   }, [categoryId]);
 
   return status === 'loading' ? (
-    <p>Loading...</p>
+    <p>Cargando...</p>
   ) : status === 'fail' ? (
     <ErrorMessage />
   ) : (

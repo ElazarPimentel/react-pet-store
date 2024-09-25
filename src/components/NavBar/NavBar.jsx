@@ -3,7 +3,7 @@
 import { NavLink } from "react-router-dom";
 import { CartWidget } from "../CartWidget/CartWidget";
 import styles from './NavBar.module.css';
-const logo = "./patapata-logo01.png"; 
+const logo = "/patapata-logo01.png";
 
 export function NavBar() {
     return (

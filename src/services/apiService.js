@@ -1,41 +1,64 @@
-// filename: ./src/services/apiService.js
+// filename: src/services/apiService.js
 
+import { doc, getDoc, setDoc, updateDoc, collection, getDocs, query, where } from 'firebase/firestore';
+import { db } from './firebase';
 
-// No se usò exponential backoff sino linial para comodidad de quien pruebe la app. En exponencial se usarìa 500 ms, 1000 ms, 2000 ms, 4000 ms etc, dependiendo de criterio de cliente o PM uncon con maxAttempts.
-
-import { getProducts } from '../data/mockAPI';
-
-export const fetchAPI = async ({ categoryId = null, productId = null } = {}) => {
-  let attempts = 0;
-  const maxAttempts = 3;
-
-  const tryFetch = async () => {
-    attempts++;
-    try {
-      const dataPromise = getProducts({ categoryId, productId });
-      const timeoutPromise = new Promise((_, reject) => setTimeout(() => reject(new Error('Timeout')), 3000));
-
-      const data = await Promise.race([dataPromise, timeoutPromise]);
-      return { data };
-    } catch (error) {
-      return attempts < maxAttempts ? { retry: true } : { fail: true };
+// Fetch cart by ID
+export const getCart = async (cartId) => {
+  try {
+    const cartDocRef = doc(db, 'carts', cartId);
+    const cartDoc = await getDoc(cartDocRef);
+    if (cartDoc.exists()) {
+      return { data: cartDoc.data().items, fail: false };
     }
-  };
-
-  for (let delay of [500, 1000, 2000]) {
-    const result = await tryFetch();
-
-    if (result.data) {
-      return result.data;
-    }
-
-    if (result.fail) {
-      return { fail: true };
-    }
-
-    console.warn(`Intento fallido para conectar con el servidor. Reintentando en ${delay*1000} segundos...`);
-    await new Promise(res => setTimeout(res, delay));
+    return { data: null, fail: true }; // Return failure if cart does not exist
+  } catch (error) {
+    console.error('Error fetching cart:', error);
+    return { fail: true };
   }
+};
 
-  return { fail: true };
+// Create new cart with an empty items array
+export const createCart = async (cartId) => {
+  try {
+    const cartDocRef = doc(db, 'carts', cartId);
+    await setDoc(cartDocRef, { items: [] });
+    return { success: true };
+  } catch (error) {
+    console.error('Error creating cart:', error);
+    return { success: false };
+  }
+};
+
+// Update cart with new items
+export const updateCart = async (cartId, items) => {
+  try {
+    const cartDocRef = doc(db, 'carts', cartId);
+    await updateDoc(cartDocRef, { items });
+    return { success: true };
+  } catch (error) {
+    console.error('Error updating cart:', error);
+    return { success: false };
+  }
+};
+
+// Fetch products by category or individual product
+export const fetchAPI = async ({ categoryId = null, productId = null } = {}) => {
+  try {
+    if (productId !== null) {
+      const q = query(collection(db, 'products'), where('id', '==', productId));  // Query by numeric 'id' field
+      const querySnapshot = await getDocs(q);
+      if (querySnapshot.empty) throw new Error('No product found');
+      return querySnapshot.docs[0].data();
+    }
+
+    const q = categoryId
+      ? query(collection(db, 'products'), where('category', '==', categoryId))
+      : collection(db, 'products');
+    const querySnapshot = await getDocs(q);
+    return querySnapshot.docs.map((doc) => doc.data());  // Return product data
+  } catch (error) {
+    console.error('Error fetching products:', error);
+    return { fail: true };
+  }
 };
