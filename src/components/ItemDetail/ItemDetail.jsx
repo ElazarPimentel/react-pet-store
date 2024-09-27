@@ -8,7 +8,6 @@ export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
   const { addToCart } = useContext(CartContext);
 
   const handleAddToCart = () => {
-    console.log("Adding to cart:", { id, name, price, imageUrl });
     addToCart({ id, name, price, imageUrl });
   };
 
