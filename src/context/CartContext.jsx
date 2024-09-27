@@ -15,26 +15,33 @@ export const CartProvider = ({ children }) => {
       if (!cookies.cartId) {
         const newCartId = Date.now().toString();
         const created = await createCart(newCartId);
+        
         if (created.success) {
           setCookie('cartId', newCartId, { path: '/' });
         }
       } else {
-        const cartId = String(cookies.cartId);  // Ensure cartId is always a string
+        const cartId = String(cookies.cartId);
         const cartData = await getCart(cartId);
+
         if (!cartData.fail) {
           setCart(cartData.data || []);
         }
       }
     };
+
     initializeCart();
   }, [cookies.cartId, setCookie]);
 
   const addToCart = async (product) => {
     const existingItem = cart.find(item => item.id === product.id);
-    const cartId = String(cookies.cartId);  // Ensure cartId is always a string
+    const cartId = String(cookies.cartId);
 
     if (existingItem) {
-      existingItem.quantity += 1;
+      const updatedCart = cart.map(item =>
+        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+      );
+      setCart(updatedCart);
+      await updateCart(cartId, updatedCart);
     } else {
       const updatedCart = [...cart, { ...product, quantity: 1 }];
       setCart(updatedCart);
@@ -42,7 +49,22 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  const value = { cart, addToCart, setCart };
+  const emptyCart = async () => {
+    const cartId = String(cookies.cartId);
+    setCart([]);
+    await updateCart(cartId, []);
+  };
+
+  const updateQuantity = async (productId, newQuantity) => {
+    const cartId = String(cookies.cartId);
+    const updatedCart = cart.map(item =>
+      item.id === productId ? { ...item, quantity: newQuantity } : item
+    );
+    setCart(updatedCart);
+    await updateCart(cartId, updatedCart);
+  };
+
+  const value = { cart, addToCart, emptyCart, updateQuantity };
 
   return (
     <CartContext.Provider value={value}>
