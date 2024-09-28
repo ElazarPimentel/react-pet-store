@@ -1,4 +1,4 @@
-// filename: ./src/components/ItemCount/ItemCount.jsx
+// filename: src/components/ItemCount/ItemCount.jsx
 
 import { useState, useEffect } from 'react';
 import styles from './ItemCount.module.css';

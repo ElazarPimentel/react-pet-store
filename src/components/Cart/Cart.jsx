@@ -5,7 +5,7 @@ import { CartContext } from '../../context/CartContext';
 import { fetchAPI, updateProductStock } from '../../services/apiService';
 import styles from './Cart.module.css';
 
-export const Cart = () => {
+export default function Cart() {
   const { cart, emptyCart, updateQuantity } = useContext(CartContext);
   const [stockInfo, setStockInfo] = useState({});
 
@@ -45,7 +45,7 @@ export const Cart = () => {
           alert(`No hay suficiente stock para ${item.name}. Solo quedan ${stockInfo[item.id]} en existencia.`);
           return;
         }
-        await updateProductStock(item.id, newStock);
+        await updateProductStock(item.id, newStock); 
       }
       await emptyCart();
       alert('Compra realizada con éxito');
@@ -75,9 +75,9 @@ export const Cart = () => {
                 )}
               </div>
               <div className={styles.cartItemControls}>
-                <button onClick={() => increaseQuantity(item)} disabled={item.quantity >= stockInfo[item.id]}>+</button>
                 <button onClick={() => decreaseQuantity(item)}>-</button>
-                <button onClick={() => {/* Implement removeItem */}}>Eliminar</button>
+                <button onClick={() => increaseQuantity(item)} disabled={item.quantity >= stockInfo[item.id]}>+</button>
+                <button onClick={() => {}}>Eliminar</button>
               </div>
             </div>
           ))}
@@ -88,5 +88,5 @@ export const Cart = () => {
         </div>
       )}
     </div>
-    );
-};
+  );
+}

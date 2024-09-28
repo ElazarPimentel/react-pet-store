@@ -1,73 +1,80 @@
-// filename: src/services/apiService.js
+//filename: src/services/apiService.js
 
 import { doc, getDoc, setDoc, updateDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from './firebase';
 
-export const getCart = async (cartId) => {
+const retry = async (fn, retries = 3, delay = 1000) => {
   try {
+    return await fn();
+  } catch (error) {
+    if (retries === 0) throw error;
+    await new Promise((resolve) => setTimeout(resolve, delay));
+    return retry(fn, retries - 1, delay * 2);
+  }
+};
+
+export const getCart = async (cartId) => {
+  return retry(async () => {
     const cartDocRef = doc(db, 'carts', cartId);
     const cartDoc = await getDoc(cartDocRef);
     if (cartDoc.exists()) {
       return { data: cartDoc.data().items, fail: false };
     }
-    return { data: null, fail: true }; 
-  } catch {
-    return { fail: true };
-  }
+    return { data: null, fail: true };
+  });
 };
 
 export const createCart = async (cartId) => {
-  try {
+  return retry(async () => {
     const cartDocRef = doc(db, 'carts', cartId);
     await setDoc(cartDocRef, { items: [] });
     return { success: true };
-  } catch {
-    return { success: false };
-  }
+  });
 };
 
 export const updateCart = async (cartId, items) => {
-  try {
+  return retry(async () => {
     const cartDocRef = doc(db, 'carts', cartId);
-
     const cartDoc = await getDoc(cartDocRef);
     if (!cartDoc.exists()) {
       await createCart(cartId);
     }
-
     await updateDoc(cartDocRef, { items });
     return { success: true };
-  } catch {
-    return { success: false };
-  }
+  });
 };
 
 export const fetchAPI = async ({ categoryId = null, productId = null } = {}) => {
-  try {
+  return retry(async () => {
     if (productId !== null) {
-      const numericProductId = Number(productId);  
-      const q = query(collection(db, 'products'), where('id', '==', numericProductId));
+      const productIdNumber = Number(productId);
+      if (isNaN(productIdNumber)) {
+        throw new Error(`Invalid productId: ${productId}`);
+      }
+      const q = query(collection(db, 'products'), where('id', '==', productIdNumber));
       const querySnapshot = await getDocs(q);
       if (querySnapshot.empty) {
-        throw new Error('No product found');
+        throw new Error('No se encontró el producto');
       }
-      return querySnapshot.docs[0].data();
+      const productDoc = querySnapshot.docs[0];
+      return { id: productDoc.id, ...productDoc.data() };
     }
-
     const q = categoryId
       ? query(collection(db, 'products'), where('category', '==', categoryId))
       : collection(db, 'products');
     const querySnapshot = await getDocs(q);
-    const products = querySnapshot.docs.map((doc) => doc.data());
+    const products = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
     return products;
-  } catch {
-    return { fail: true };
-  }
+  });
 };
 
 export const updateProductStock = async (productId, newStock) => {
-  try {
-    const q = query(collection(db, 'products'), where('id', '==', productId));
+  return retry(async () => {
+    const productIdNumber = Number(productId);
+    if (isNaN(productIdNumber)) {
+      throw new Error(`Invalid productId: ${productId}`);
+    }
+    const q = query(collection(db, 'products'), where('id', '==', productIdNumber));
     const querySnapshot = await getDocs(q);
     if (!querySnapshot.empty) {
       const productDoc = querySnapshot.docs[0];
@@ -76,7 +83,5 @@ export const updateProductStock = async (productId, newStock) => {
       return { success: true };
     }
     return { success: false };
-  } catch {
-    return { success: false };
-  }
+  });
 };

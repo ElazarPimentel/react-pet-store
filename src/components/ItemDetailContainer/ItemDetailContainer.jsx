@@ -1,4 +1,4 @@
-// filename: ./src/components/ItemDetailContainer/ItemDetailContainer.jsx
+// filename: src/components/ItemDetailContainer/ItemDetailContainer.jsx
 
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -6,16 +6,14 @@ import { fetchAPI } from '../../services/apiService';
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { ErrorMessage } from '../ErrorMessage/ErrorMessage';
 
-export function ItemDetailContainer() {
+export default function ItemDetailContainer() {
   const [product, setProduct] = useState(null);
   const [status, setStatus] = useState('loading');
   const { itemId } = useParams();  
 
   useEffect(() => {
     const fetchData = async () => {
-      const productId = Number(itemId);  
-      const result = await fetchAPI({ productId });
-
+      const result = await fetchAPI({ productId: itemId }); 
       if (result.fail) {
         setStatus('fail');
       } else {
