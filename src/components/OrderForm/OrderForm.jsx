@@ -55,8 +55,6 @@ export default function OrderForm() {
       await batch.commit();
       clearCart();
       setOrderPlaced(true);
-    } catch (error) {
-      console.error('Error placing order:', error);
     } finally {
       setLoading(false);
     }

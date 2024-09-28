@@ -19,16 +19,20 @@ export function ItemCount({ stock, initial, onAdd, productId }) {
   return (
     <div className={styles.itemCountContainer}>
       <div className={styles.counterControls}>
-        <button className={styles.countButton} onClick={decreaseCount}>-</button>
+        <button className={styles.countButton} onClick={decreaseCount} disabled={stock === 0}>
+          -
+        </button>
         <span className={styles.countDisplay}>{count}</span>
-        <button className={styles.countButton} onClick={increaseCount}>+</button>
+        <button className={styles.countButton} onClick={increaseCount} disabled={stock === 0}>
+          +
+        </button>
       </div>
       <button
         className={styles.addToCartButton}
         onClick={() => onAdd(count)}
-        disabled={count === 0}
+        disabled={count === 0 || stock === 0}
       >
-        Agregar al carrito
+        {stock === 0 ? 'Sin stock' : 'Agregar al carrito'}
       </button>
     </div>
   );

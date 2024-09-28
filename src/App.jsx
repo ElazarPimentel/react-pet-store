@@ -11,7 +11,7 @@ export function App() {
     <div className="App">
       <CartProvider>
         <BrowserRouter>
-          <NavBar /> 
+          <NavBar />
           <AppRouter />
         </BrowserRouter>
       </CartProvider>

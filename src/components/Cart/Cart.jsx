@@ -45,7 +45,7 @@ export default function Cart() {
           alert(`No hay suficiente stock para ${item.name}. Solo quedan ${stockInfo[item.id]} en existencia.`);
           return;
         }
-        await updateProductStock(item.id, newStock); 
+        await updateProductStock(item.id, newStock);
       }
       await emptyCart();
       alert('Compra realizada con éxito');
@@ -76,14 +76,19 @@ export default function Cart() {
               </div>
               <div className={styles.cartItemControls}>
                 <button onClick={() => decreaseQuantity(item)}>-</button>
-                <button onClick={() => increaseQuantity(item)} disabled={item.quantity >= stockInfo[item.id]}>+</button>
-                <button onClick={() => {}}>Eliminar</button>
+                <button onClick={() => increaseQuantity(item)} disabled={item.quantity >= stockInfo[item.id]}>
+                  +
+                </button>
               </div>
             </div>
           ))}
           <div className={styles.cartSummary}>
-            <button onClick={emptyCart} className={styles.checkoutButton}>Vaciar carrito</button>
-            <button onClick={checkout} className={styles.checkoutButton}>Finalizar compra</button>
+            <button onClick={emptyCart} className={styles.checkoutButton}>
+              Vaciar carrito
+            </button>
+            <button onClick={checkout} className={styles.checkoutButton}>
+              Finalizar compra
+            </button>
           </div>
         </div>
       )}

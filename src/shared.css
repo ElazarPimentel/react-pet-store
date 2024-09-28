@@ -8,6 +8,7 @@
     --lighter-color: #76737e;
     --primary-text-color: #908d96;
     --text-color: var(--primary-text-color);
+    --text-color-error: rgb(255, 208, 0);
     --border-radius: 0.5rem;
     --lightest-color: white;
     --font-size: 16px;
