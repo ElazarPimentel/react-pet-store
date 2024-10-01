@@ -1,55 +1,75 @@
 /* filename: src/components/ItemDetail/ItemDetail.module.css */
 
 .card {
-    background-color: var(--secondary-bg-color);
-    color: var(--primary-text-color);
-    padding: var(--padding-standard);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    max-width: 500px;
-    text-align: center;
-    margin: 1rem auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .imageContainer {
-    position: relative;
-    width: 100%;
-  }
-  
-  .itemImage {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-  }
-  
-  .outOfStockImage {
-    filter: grayscale(100%);
-    opacity: 0.7;
-  }
-  
-  .outOfStockBadge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--text-color-error); 
-    color: var(--lightest-color);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    font-weight: bold;
-  }
-  
-  .itemPriceDisplay {
-    font-size: 1.2rem;
-    color: var(--lightest-color);
-    margin: 0.5rem 0;
-  }
-  
-  .itemStock {
-    font-size: 1rem;
-    color: var(--text-color);
-    margin-bottom: 1rem;
-  }
-  
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  padding: var(--padding-standard);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 500px;
+  text-align: center;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+.itemImage {
+  width: var(--img-width);
+  height: var(--img-height-auto);
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.outOfStockImage {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.outOfStockBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--text-color-error);
+  color: var(--lightest-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.itemPriceDisplay {
+  font-size: 1.2rem;
+  color: var(--lightest-color);
+  margin: 0.5rem 0;
+}
+
+.itemStock {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.addedToCartMessage {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.goToCartButton {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: var(--btn-padding);
+  background-color: var(--accent-color);
+  color: var(--lightest-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.goToCartButton:hover {
+  background-color: var(--lighter-color);
+}

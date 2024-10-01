@@ -1,9 +1,10 @@
 // filename: src/components/ItemCount/ItemCount.jsx
 
 import { useState, useEffect } from 'react';
+import { adjustQuantity } from '../../utils/quantityHandler';
 import styles from './ItemCount.module.css';
 
-export function ItemCount({ stock, initial, onAdd, productId }) {
+export function ItemCount({ stock, initial, onAdd, productId, cart = [] }) {  // Set default value for cart
   const [count, setCount] = useState(() => {
     const savedCount = localStorage.getItem(`itemCount-${productId}`);
     return savedCount ? Number(savedCount) : initial;
@@ -13,8 +14,19 @@ export function ItemCount({ stock, initial, onAdd, productId }) {
     localStorage.setItem(`itemCount-${productId}`, count);
   }, [count, productId]);
 
-  const increaseCount = () => count < stock && setCount(count + 1);
-  const decreaseCount = () => count > 0 && setCount(count - 1);
+  const increaseCount = () => {
+    if (count < stock) {
+      const updatedCart = adjustQuantity(cart, productId, 1);  // Handle cart properly
+      setCount(count + 1);
+    }
+  };
+
+  const decreaseCount = () => {
+    if (count > 0) {
+      const updatedCart = adjustQuantity(cart, productId, -1);  // Handle cart properly
+      setCount(count - 1);
+    }
+  };
 
   return (
     <div className={styles.itemCountContainer}>

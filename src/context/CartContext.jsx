@@ -38,12 +38,14 @@ export const CartProvider = ({ children }) => {
 
     if (existingItem) {
       const updatedCart = cart.map(item =>
-        item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + product.quantity }
+          : item
       );
       setCart(updatedCart);
       await updateCart(cartId, updatedCart);
     } else {
-      const updatedCart = [...cart, { ...product, quantity: 1 }];
+      const updatedCart = [...cart, { ...product }];
       setCart(updatedCart);
       await updateCart(cartId, updatedCart);
     }
@@ -64,7 +66,14 @@ export const CartProvider = ({ children }) => {
     await updateCart(cartId, updatedCart);
   };
 
-  const value = { cart, addToCart, emptyCart, updateQuantity };
+  const removeItem = async (productId) => {
+    const cartId = String(cookies.cartId);
+    const updatedCart = cart.filter(item => item.id !== productId);
+    setCart(updatedCart);
+    await updateCart(cartId, updatedCart);
+  };
+
+  const value = { cart, addToCart, emptyCart, updateQuantity, removeItem };
 
   return (
     <CartContext.Provider value={value}>

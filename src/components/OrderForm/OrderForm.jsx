@@ -1,15 +1,24 @@
 // filename: src/components/OrderForm/OrderForm.jsx
 
-import { useState } from 'react';
-import { collection, addDoc, doc, writeBatch, increment } from 'firebase/firestore';
+import { useState, useContext } from 'react';
+import {
+  collection,
+  addDoc,
+  writeBatch,
+  increment,
+  query,
+  where,
+  getDocs,
+} from 'firebase/firestore';
 import { db } from '../../services/firebase';
-import { useCartContext } from '../../context/CartContext';
+import { CartContext } from '../../context/CartContext';
 import { OrderSummary } from './OrderSummary';
 import { FormField } from './FormField';
+import { Modal } from '../Modal/Modal';
 import styles from './OrderForm.module.css';
 
 export default function OrderForm() {
-  const { cart, clearCart } = useCartContext();
+  const { cart, emptyCart } = useContext(CartContext);
   const [orderPlaced, setOrderPlaced] = useState(false);
   const [orderId, setOrderId] = useState(null);
   const [formData, setFormData] = useState({
@@ -19,6 +28,7 @@ export default function OrderForm() {
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const validate = () => {
     const errors = {};
@@ -35,10 +45,14 @@ export default function OrderForm() {
     return Object.keys(errors).length === 0;
   };
 
-  const handlePlaceOrder = async (event) => {
+  const handlePlaceOrder = (event) => {
     event.preventDefault();
     if (!validate()) return;
+    setShowModal(true);
+  };
 
+  const confirmOrder = async () => {
+    setShowModal(false);
     setLoading(true);
 
     try {
@@ -48,16 +62,32 @@ export default function OrderForm() {
       setOrderId(orderDoc.id);
 
       const batch = writeBatch(db);
-      cart.forEach(item => {
-        const productRef = doc(db, 'products', item.id);
-        batch.update(productRef, { stock: increment(-item.quantity) });
-      });
+
+      for (const item of cart) {
+        const productsRef = collection(db, 'products');
+        const q = query(productsRef, where('id', '==', Number(item.id)));
+        const querySnapshot = await getDocs(q);
+
+        if (!querySnapshot.empty) {
+          const productDoc = querySnapshot.docs[0];
+          const productRef = productDoc.ref;
+
+          batch.update(productRef, { stock: increment(-item.quantity) });
+        }
+      }
+
       await batch.commit();
-      clearCart();
+      emptyCart();
       setOrderPlaced(true);
+    } catch (error) {
+      console.error('Error al procesar la orden:', error);
     } finally {
       setLoading(false);
     }
+  };
+
+  const cancelOrder = () => {
+    setShowModal(false);
   };
 
   const handleChange = (e) => {
@@ -100,6 +130,7 @@ export default function OrderForm() {
           label="Correo electrónico"
           type="email"
           name="email"
+          value={formData.email}
           onChange={handleChange}
           error={errors.email}
         />
@@ -107,6 +138,16 @@ export default function OrderForm() {
           {loading ? 'Procesando...' : 'Confirmar compra'}
         </button>
       </form>
+
+      <Modal
+        isOpen={showModal}
+        title="Confirmar Compra"
+        message="¿Estás seguro de que deseas confirmar la compra?"
+        onConfirm={confirmOrder}
+        onCancel={cancelOrder}
+        confirmText="Sí"
+        cancelText="No"
+      />
     </div>
   );
 }

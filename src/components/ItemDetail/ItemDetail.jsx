@@ -3,15 +3,21 @@
 import { useState, useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { ItemCount } from '../ItemCount/ItemCount';
+import { useNavigate } from 'react-router-dom';
 import styles from './ItemDetail.module.css';
 
 export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
   const { addToCart } = useContext(CartContext);
   const [addedToCart, setAddedToCart] = useState(false);
+  const navigate = useNavigate();
 
   const handleAddToCart = (quantity) => {
     addToCart({ id, name, price, imageUrl, quantity });
     setAddedToCart(true);
+  };
+
+  const goToCart = () => {
+    navigate('/cart');
   };
 
   return (
@@ -33,7 +39,14 @@ export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
       {stock > 0 && !addedToCart && (
         <ItemCount stock={stock} initial={1} onAdd={handleAddToCart} productId={id} />
       )}
-      {addedToCart && <p>Producto agregado al carrito.</p>}
+      {addedToCart && (
+        <>
+          <p>Producto agregado al carrito.</p>
+          <button onClick={goToCart} className={styles.goToCartButton}>
+            Ir al carrito
+          </button>
+        </>
+      )}
     </div>
   );
 }
