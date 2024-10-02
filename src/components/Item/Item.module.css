@@ -1,84 +1,85 @@
 /* filename: src/components/Item/Item.module.css */
 
 .card {
-    background-color: var(--secondary-bg-color);
-    color: var(--primary-text-color);
-    padding: var(--padding-standard);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    width: calc(25% - 2rem);
-    max-width: 250px;
-    text-align: center;
-    margin: 1rem;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .imageContainer {
-    position: relative;
-    width: 100%;
-  }
-  
-  .itemImage {
-    width: 100%;
-    height: auto;
-    border-radius: var(--border-radius);
-  }
-  
-  .outOfStockImage {
-    filter: grayscale(100%);
-    opacity: 0.7;
-  }
-  
-  .outOfStockBadge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: var(--text-color-error);
-    color: var(--lightest-color);
-    padding: 0.5rem 1rem;
-    border-radius: var(--border-radius);
-    font-weight: bold;
-  }
-  
-  h2 {
-    font-size: 1.2rem;
-    color: var(--lightest-color);
-    margin-top: 0.5rem;
-  }
-  
-  p {
-    font-size: 0.9rem;
-    color: var(--text-color);
-  }
-  
-  .itemPriceDisplay {
-    font-size: 1.1rem;
-    color: var(--lightest-color);
-    margin: 0.5rem 0;
-  }
-  
-  .itemFooter {
-    margin-top: auto;
-    padding: 10px 0;
-  }
-  
-  .button {
-    background-color: var(--accent-color);
-    color: var(--lightest-color);
-    padding: var(--btn-padding);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    transition: background-color var(--btn-transition);
-    text-align: center;
-    text-decoration: none;
-    margin: var(--button-margin);
-    width: calc(100% - 2 * var(--button-margin));
-  }
-  
-  .button:hover {
-    background-color: var(--lighter-color);
-    box-shadow: 0 4px 12px var(--primary-bg-color);
-  }
-  
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  padding: var(--padding-standard);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: calc(25% - 2rem);
+  max-width: 250px;
+  text-align: center;
+  margin: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+}
+
+.itemImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.outOfStockImage {
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.outOfStockBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--text-color-error);
+  color: var(--lightest-color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.2rem;
+  color: var(--lightest-color);
+  margin-top: 0.5rem;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.itemPriceDisplay {
+  font-size: 1.1rem;
+  color: var(--lightest-color);
+  margin: 0.5rem 0;
+}
+
+.itemFooter {
+  margin-top: auto;
+  padding: 10px 0;
+}
+
+.button {
+  background-color: var(--accent-color);
+  color: var(--lightest-color);
+  padding: var(--btn-padding);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--btn-transition);
+  text-align: center;
+  text-decoration: none;
+  margin: var(--button-margin);
+  width: calc(100% - 2 * var(--button-margin));
+  font-size: 0.9rem;
+}
+
+.button:hover {
+  background-color: var(--lighter-color);
+  box-shadow: 0 4px 12px var(--primary-bg-color);
+}

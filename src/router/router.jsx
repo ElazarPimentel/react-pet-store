@@ -1,4 +1,4 @@
-// filename: src/router/router.jsx
+// src/router/router.jsx
 
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route, useParams } from 'react-router-dom';

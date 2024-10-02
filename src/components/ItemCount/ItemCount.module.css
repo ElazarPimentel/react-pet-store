@@ -1,5 +1,6 @@
 /* filename: src/components/ItemCount/ItemCount.module.css */
 
+
 .itemCountContainer {
     display: flex;
     flex-direction: column;
@@ -18,8 +19,43 @@
 .countButton {
     padding: var(--count-button-padding);
     font-size: var(--count-display-font-size);
+    background-color: var(--accent-color);
+    color: var(--lightest-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.countButton:disabled {
+    background-color: var(--lighter-color);
+    cursor: not-allowed;
 }
 
 .countDisplay {
+    min-width: 30px;
+    text-align: center;
+    font-size: 1rem;
     color: var(--lightest-color);
+}
+
+.addToCartButton {
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--lightest-color);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.addToCartButton:disabled {
+    background-color: var(--lighter-color);
+    cursor: not-allowed;
+}
+
+.addToCartButton:hover:not(:disabled) {
+    background-color: var(--lighter-color);
+    box-shadow: 0 4px 12px var(--primary-bg-color);
 }

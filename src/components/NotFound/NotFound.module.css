@@ -1,6 +1,11 @@
+/* filename: src/components/NotFound/NotFound.module.css */
+
 .notFoundContainer {
     text-align: center;
     margin-top: 2rem;
     padding: 2rem;
     color: var(--lightest-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
 }

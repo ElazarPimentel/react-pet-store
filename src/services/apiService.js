@@ -1,13 +1,15 @@
-//filename: src/services/apiService.js
+// filename: src/services/apiService.js
 
 import { doc, getDoc, setDoc, updateDoc, collection, getDocs, query, where } from 'firebase/firestore';
 import { db } from './firebase';
 
+// Exponential Backoff Retry Function
 const retry = async (fn, retries = 3, delay = 1000) => {
   try {
     return await fn();
   } catch (error) {
     if (retries === 0) throw error;
+    console.warn(`Retrying in ${delay}ms... (${retries} retries left)`);
     await new Promise((resolve) => setTimeout(resolve, delay));
     return retry(fn, retries - 1, delay * 2);
   }

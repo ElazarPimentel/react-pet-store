@@ -1,5 +1,7 @@
 /* filename: src/components/OrderForm/OrderForm.module.css */
 
+/* ./src/components/OrderForm/OrderForm.module.css */
+
 .orderFormContainer {
   background-color: var(--dark-secondary-color);
   padding: 2rem;
@@ -26,6 +28,13 @@
 .error {
   color: var(--text-color-error);
   font-size: 0.9rem;
+}
+
+.formError {
+  color: var(--text-color-error);
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .placeOrderButton {
@@ -56,4 +65,23 @@
   justify-content: space-between;
   padding: 0.5rem 0;
   border-bottom: 1px solid #ddd;
+}
+
+.orderSummary {
+  background-color: var(--secondary-bg-color);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.orderSummary h3 {
+  margin-bottom: 0.5rem;
+  color: var(--lightest-color);
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: var(--lightest-color);
 }

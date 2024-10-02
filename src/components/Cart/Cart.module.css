@@ -8,22 +8,29 @@
   border-radius: var(--border-radius);
 }
 
+.cartItemsContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 1rem; 
+  justify-content: flex-start; 
+}
+
 .cartItem {
   background-color: var(--secondary-bg-color);
   color: var(--primary-text-color);
   padding: var(--padding-standard);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  max-width: 300px; /* Reduce the card size */
+  max-width: 300px; 
   text-align: center;
-  margin: 1rem auto;
+  margin: 1rem; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .cartItem img {
-  width: 100%;  /* Keep the image at 100% of the card width */
+  width: 100%;  
   height: auto;
   object-fit: cover;
   border-radius: var(--border-radius);
@@ -36,22 +43,44 @@
 
 .cartItemControls {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
+  flex-wrap: wrap; 
 }
 
-.cartItemControls button {
+.controlButton {
   padding: 0.5rem 1rem;
-  background-color: var(--accent-color); /* General button color */
-  color: var(--lightest-color); /* Text color */
+  background-color: var(--accent-color); 
+  color: var(--lightest-color); 
   border: none;
   cursor: pointer;
   border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+.controlButton:disabled {
+  background-color: var(--lighter-color);
+  cursor: not-allowed;
+}
+
+.quantity {
+  min-width: 30px;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--lightest-color);
 }
 
 .removeButton {
-  background-color: var(--accent-color); /* Default button styling */
-  color: var(--lightest-color); /* Make the "Sacar del carrito" button normal */
+  background-color: var(--accent-color); 
+  color: var(--lightest-color);
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .cartSummary {
@@ -59,6 +88,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-wrap: wrap; 
 }
 
 .checkoutButton {
@@ -68,4 +98,11 @@
   border: none;
   cursor: pointer;
   border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkoutButton:hover {
+  background-color: var(--lighter-color);
+  box-shadow: 0 4px 12px var(--primary-bg-color);
 }

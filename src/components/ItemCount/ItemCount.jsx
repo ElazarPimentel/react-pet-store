@@ -1,10 +1,9 @@
-// filename: src/components/ItemCount/ItemCount.jsx
+// src/components/ItemCount/ItemCount.jsx
 
 import { useState, useEffect } from 'react';
-import { adjustQuantity } from '../../utils/quantityHandler';
 import styles from './ItemCount.module.css';
 
-export function ItemCount({ stock, initial, onAdd, productId, cart = [] }) {  // Set default value for cart
+export function ItemCount({ stock, initial, onAdd, productId, cart = [] }) {
   const [count, setCount] = useState(() => {
     const savedCount = localStorage.getItem(`itemCount-${productId}`);
     return savedCount ? Number(savedCount) : initial;
@@ -16,14 +15,12 @@ export function ItemCount({ stock, initial, onAdd, productId, cart = [] }) {  //
 
   const increaseCount = () => {
     if (count < stock) {
-      const updatedCart = adjustQuantity(cart, productId, 1);  // Handle cart properly
       setCount(count + 1);
     }
   };
 
   const decreaseCount = () => {
     if (count > 0) {
-      const updatedCart = adjustQuantity(cart, productId, -1);  // Handle cart properly
       setCount(count - 1);
     }
   };
@@ -31,11 +28,11 @@ export function ItemCount({ stock, initial, onAdd, productId, cart = [] }) {  //
   return (
     <div className={styles.itemCountContainer}>
       <div className={styles.counterControls}>
-        <button className={styles.countButton} onClick={decreaseCount} disabled={stock === 0}>
+        <button className={styles.countButton} onClick={decreaseCount} disabled={count === 0}>
           -
         </button>
         <span className={styles.countDisplay}>{count}</span>
-        <button className={styles.countButton} onClick={increaseCount} disabled={stock === 0}>
+        <button className={styles.countButton} onClick={increaseCount} disabled={count >= stock}>
           +
         </button>
       </div>

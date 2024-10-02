@@ -1,11 +1,10 @@
-// filename: src/components/Cart/Cart.jsx
+// src/components/Cart/Cart.jsx
 
 import { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { fetchAPI } from '../../services/apiService';
 import { useNavigate } from 'react-router-dom';
 import { Modal } from '../Modal/Modal';
-import { adjustQuantity } from '../../utils/quantityHandler';
 import styles from './Cart.module.css';
 
 export default function Cart() {
@@ -14,20 +13,23 @@ export default function Cart() {
   const [showEmptyCartModal, setShowEmptyCartModal] = useState(false);
   const [showRemoveItemModal, setShowRemoveItemModal] = useState(false);
   const [itemToRemove, setItemToRemove] = useState(null);
+  const [stockError, setStockError] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
     const fetchStock = async () => {
-      const stocks = {};
-      for (const item of cart) {
-        const product = await fetchAPI({ productId: item.id });
-        if (product && product.stock !== undefined) {
-          stocks[item.id] = product.stock;
-        } else {
-          stocks[item.id] = 0;
+      try {
+        const stocks = {};
+        for (const item of cart) {
+          const product = await fetchAPI({ productId: item.id });
+          stocks[item.id] = product?.stock || 0;
         }
+        setStockInfo(stocks);
+      } catch (error) {
+        console.error('Error al obtener el stock:', error);
+        setStockError('Hubo un error al obtener la información de stock.');
+        setStockInfo({});
       }
-      setStockInfo(stocks);
     };
     fetchStock();
   }, [cart]);
@@ -80,28 +82,39 @@ export default function Cart() {
   return (
     <div className={styles.cartContainer}>
       <h2>Tu carrito</h2>
+      {stockError && <p className={styles.error}>{stockError}</p>}
       {cart.length === 0 ? (
         <p>El carrito está vacío.</p>
       ) : (
-        <div>
-          {cart.map((item) => (
-            <div key={item.id} className={styles.cartItem}>
-              <img src={item.imageUrl} alt={item.name} />
-              <div className={styles.cartItemDetails}>
-                <p>{item.name}</p>
-                <p>Precio: ${item.price}</p>
-                <p>Stock disponible: {stockInfo[item.id]}</p>
+        <>
+          <div className={styles.cartItemsContainer}>
+            {cart.map((item) => (
+              <div key={item.id} className={styles.cartItem}>
+                <img src={item.imageUrl} alt={item.name} />
+                <div className={styles.cartItemDetails}>
+                  <p>{item.name}</p>
+                  <p>Precio: ${item.price}</p>
+                  <p>Stock disponible: {stockInfo[item.id] === 0 ? '0 - Pronto nuevo stock!' : stockInfo[item.id]}</p>
+                </div>
+                <div className={styles.cartItemControls}>
+                  <button onClick={() => decreaseQuantity(item)} className={styles.controlButton}>
+                    -
+                  </button>
+                  <span className={styles.quantity}>{item.quantity}</span>
+                  <button
+                    onClick={() => increaseQuantity(item)}
+                    className={styles.controlButton}
+                    disabled={item.quantity >= stockInfo[item.id]}
+                  >
+                    +
+                  </button>
+                  <button onClick={() => handleRemoveFromCart(item)} className={styles.removeButton}>
+                    Sacar del Carrito
+                  </button>
+                </div>
               </div>
-              <div className={styles.cartItemControls}>
-                <button onClick={() => decreaseQuantity(item)}>-</button>
-                <p>Cantidad: {item.quantity}</p>
-                <button onClick={() => increaseQuantity(item)}>+</button>
-              </div>
-              <button onClick={() => handleRemoveFromCart(item)} className={styles.removeButton}>
-                Sacar del carrito
-              </button>
-            </div>
-          ))}
+            ))}
+          </div>
           <div className={styles.cartSummary}>
             <button onClick={handleEmptyCart} className={styles.checkoutButton}>
               Vaciar carrito
@@ -110,7 +123,7 @@ export default function Cart() {
               Finalizar compra
             </button>
           </div>
-        </div>
+        </>
       )}
       <Modal
         isOpen={showEmptyCartModal}

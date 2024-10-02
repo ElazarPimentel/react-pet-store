@@ -1,11 +1,11 @@
-// filename: ./src/components/ErrorMessage/ErrorMessage.jsx
+// src/components/ErrorMessage/ErrorMessage.jsx
 
 import styles from './ErrorMessage.module.css';
 
-export function ErrorMessage() {
+export function ErrorMessage({ message }) {
   return (
     <div className={styles.errorContainer}>
-      <p>Ups, hay un problema con el servidor. Por favor intentar más tarde nuevamente.</p>
+      <p>{message}</p>
     </div>
   );
 }

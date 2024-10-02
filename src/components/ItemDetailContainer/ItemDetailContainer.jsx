@@ -1,5 +1,6 @@
 // filename: src/components/ItemDetailContainer/ItemDetailContainer.jsx
 
+
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchAPI } from '../../services/apiService';
@@ -13,12 +14,16 @@ export default function ItemDetailContainer() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await fetchAPI({ productId: itemId });
-      if (result.fail) {
-        setStatus('fail');
-      } else {
-        setProduct(result);
-        setStatus('success');
+      try {
+        const result = await fetchAPI({ productId: itemId });
+        if (!result || result.fail) {
+          setStatus('fail');
+        } else {
+          setProduct(result);
+          setStatus('success');
+        }
+      } catch (error) {
+        setStatus('network-error');
       }
     };
 
@@ -28,7 +33,9 @@ export default function ItemDetailContainer() {
   return status === 'loading' ? (
     <p>Cargando...</p>
   ) : status === 'fail' ? (
-    <ErrorMessage />
+    <ErrorMessage message="No se pudo cargar el detalle del producto." />
+  ) : status === 'network-error' ? (
+    <ErrorMessage message="Problema de red, por favor inténtalo más tarde." />
   ) : (
     <div className="ui-container">
       <ItemDetail {...product} />

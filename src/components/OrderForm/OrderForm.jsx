@@ -1,4 +1,4 @@
-// filename: src/components/OrderForm/OrderForm.jsx
+// src/components/OrderForm/OrderForm.jsx
 
 import { useState, useContext } from 'react';
 import {
@@ -13,7 +13,7 @@ import {
 import { db } from '../../services/firebase';
 import { CartContext } from '../../context/CartContext';
 import { OrderSummary } from './OrderSummary';
-import { FormField } from './FormField';
+import { FormField } from '../FormField/FormField';
 import { Modal } from '../Modal/Modal';
 import styles from './OrderForm.module.css';
 
@@ -29,6 +29,7 @@ export default function OrderForm() {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [formError, setFormError] = useState(null);
 
   const validate = () => {
     const errors = {};
@@ -54,6 +55,7 @@ export default function OrderForm() {
   const confirmOrder = async () => {
     setShowModal(false);
     setLoading(true);
+    setFormError(null);
 
     try {
       const ordersCollection = collection(db, 'orders');
@@ -81,6 +83,7 @@ export default function OrderForm() {
       setOrderPlaced(true);
     } catch (error) {
       console.error('Error al procesar la orden:', error);
+      setFormError('Hubo un error al procesar tu pedido. Por favor, inténtalo nuevamente.');
     } finally {
       setLoading(false);
     }
@@ -108,6 +111,8 @@ export default function OrderForm() {
     <div className={styles.orderFormContainer}>
       <h2>Revisar y confirmar tu pedido</h2>
       <OrderSummary cart={cart} />
+
+      {formError && <p className={styles.formError}>{formError}</p>}
 
       <form onSubmit={handlePlaceOrder} className={styles.formGroup}>
         <FormField

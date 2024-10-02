@@ -1,4 +1,4 @@
-// filename: src/components/NotFound/NotFound.jsx
+// src/components/NotFound/NotFound.jsx
 
 import { Link } from 'react-router-dom';
 import styles from './NotFound.module.css';

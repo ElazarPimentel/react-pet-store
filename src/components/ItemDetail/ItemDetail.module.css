@@ -6,7 +6,7 @@
   padding: var(--padding-standard);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
-  max-width: 500px;
+  max-width: 18rem; 
   text-align: center;
   margin: 1rem auto;
   display: flex;
@@ -54,9 +54,10 @@
   margin-bottom: 1rem;
 }
 
-.addedToCartMessage {
-  margin-top: 1rem;
-  text-align: center;
+.error {
+  color: var(--text-color-error);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
 }
 
 .goToCartButton {
@@ -68,8 +69,10 @@
   text-decoration: none;
   border-radius: var(--border-radius);
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .goToCartButton:hover {
   background-color: var(--lighter-color);
+  box-shadow: 0 4px 12px var(--primary-bg-color);
 }

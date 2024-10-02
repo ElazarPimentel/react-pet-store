@@ -1,0 +1,27 @@
+/* filename: src/components/FormField/FormField.module.css */
+
+.formField {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.formField label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--lightest-color);
+}
+
+.formField input {
+    padding: 0.5rem;
+    border: 1px solid var(--lighter-color);
+    border-radius: var(--border-radius);
+    background-color: var(--secondary-bg-color);
+    color: var(--lightest-color);
+}
+
+.error {
+    color: var(--text-color-error);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+}

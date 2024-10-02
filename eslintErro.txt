@@ -1,0 +1,944 @@
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/.vite/deps/chunk-QPG7G3M7.js
+     10:9    error  Unexpected constant condition                                              no-constant-condition
+     13:77   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+     14:11   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+     90:34   error  'task' is defined but never used                                           no-unused-vars
+     90:40   error  'ms' is defined but never used                                             no-unused-vars
+    121:71   error  'setImmediate' is not defined                                              no-undef
+    122:13   error  'isInputPending' is assigned a value but never used                        no-unused-vars
+    448:77   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    449:11   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    460:9    error  Unexpected constant condition                                              no-constant-condition
+    472:9    error  Unexpected constant condition                                              no-constant-condition
+    475:77   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    476:11   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    662:42   error  Unexpected combined character in character class                           no-misleading-character-class
+    742:29   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    955:26   error  Unnecessary escape character: \-                                           no-useless-escape
+    955:28   error  Unnecessary escape character: \:                                           no-useless-escape
+   1138:36   error  Unexpected control character(s) in regular expression: \x00, \x1f          no-control-regex
+   1138:155  error  Unnecessary escape character: \:                                           no-useless-escape
+   1195:61   error  'isCustomComponentTag' is defined but never used                           no-unused-vars
+   1383:54   error  'source' is defined but never used                                         no-unused-vars
+   1383:62   error  'ownerFn' is defined but never used                                        no-unused-vars
+   1505:52   error  'source' is defined but never used                                         no-unused-vars
+   1505:60   error  'ownerFn' is defined but never used                                        no-unused-vars
+   1510:53   error  'source' is defined but never used                                         no-unused-vars
+   1510:61   error  'ownerFn' is defined but never used                                        no-unused-vars
+   1549:29   error  Empty block statement                                                      no-empty
+   1557:15   error  'owner' is assigned a value but never used                                 no-unused-vars
+   1558:15   error  'source' is assigned a value but never used                                no-unused-vars
+   1845:20   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1992:23   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   1994:30   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2006:21   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2006:54   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2157:44   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2305:46   error  'props' is defined but never used                                          no-unused-vars
+   2340:47   error  'MSApp' is not defined                                                     no-undef
+   2342:15   error  'MSApp' is not defined                                                     no-undef
+   2492:99   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2522:34   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2536:34   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2543:35   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2549:52   error  'value' is defined but never used                                          no-unused-vars
+   2556:57   error  'value' is defined but never used                                          no-unused-vars
+   2586:27   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   2603:25   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3273:21   error  Unexpected combined character in character class                           no-misleading-character-class
+   3274:26   error  Unexpected combined character in character class                           no-misleading-character-class
+   3282:48   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3296:49   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3357:25   error  Unexpected combined character in character class                           no-misleading-character-class
+   3358:30   error  Unexpected combined character in character class                           no-misleading-character-class
+   3371:49   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3374:65   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3417:39   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3631:15   error  Expected to return a value in method 'get'                                 getter-return
+   3641:65   error  'a' is defined but never used                                              no-unused-vars
+   3641:68   error  'b' is defined but never used                                              no-unused-vars
+   3641:71   error  'c' is defined but never used                                              no-unused-vars
+   3641:74   error  'd' is defined but never used                                              no-unused-vars
+   3641:77   error  'e' is defined but never used                                              no-unused-vars
+   3641:80   error  'f' is defined but never used                                              no-unused-vars
+   3653:96   error  'a' is defined but never used                                              no-unused-vars
+   3653:99   error  'b' is defined but never used                                              no-unused-vars
+   3653:102  error  'c' is defined but never used                                              no-unused-vars
+   3653:105  error  'd' is defined but never used                                              no-unused-vars
+   3653:108  error  'e' is defined but never used                                              no-unused-vars
+   3653:111  error  'f' is defined but never used                                              no-unused-vars
+   3664:67   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   3688:37   error  Empty block statement                                                      no-empty
+   3728:40   error  'name' is defined but never used                                           no-unused-vars
+   3728:46   error  'func' is defined but never used                                           no-unused-vars
+   3728:52   error  'context' is defined but never used                                        no-unused-vars
+   3728:61   error  'a' is defined but never used                                              no-unused-vars
+   3728:64   error  'b' is defined but never used                                              no-unused-vars
+   3728:67   error  'c' is defined but never used                                              no-unused-vars
+   3728:70   error  'd' is defined but never used                                              no-unused-vars
+   3728:73   error  'e' is defined but never used                                              no-unused-vars
+   3728:76   error  'f' is defined but never used                                              no-unused-vars
+   3733:58   error  'name' is defined but never used                                           no-unused-vars
+   3733:64   error  'func' is defined but never used                                           no-unused-vars
+   3733:70   error  'context' is defined but never used                                        no-unused-vars
+   3733:79   error  'a' is defined but never used                                              no-unused-vars
+   3733:82   error  'b' is defined but never used                                              no-unused-vars
+   3733:85   error  'c' is defined but never used                                              no-unused-vars
+   3733:88   error  'd' is defined but never used                                              no-unused-vars
+   3733:91   error  'e' is defined but never used                                              no-unused-vars
+   3733:94   error  'f' is defined but never used                                              no-unused-vars
+   3964:18   error  Unexpected constant condition                                              no-constant-condition
+   4108:22   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+   4950:53   error  'eventTime' is defined but never used                                      no-unused-vars
+   5071:41   error  'root2' is defined but never used                                          no-unused-vars
+   5071:48   error  'lanes' is defined but never used                                          no-unused-vars
+   5731:30   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   5759:55   error  Invalid typeof comparison value                                            valid-typeof
+   5771:56   error  Invalid typeof comparison value                                            valid-typeof
+   5964:40   error  'nativeEvent' is defined but never used                                    no-unused-vars
+   6226:105  error  'eventSystemFlags' is defined but never used                               no-unused-vars
+   6226:123  error  'targetContainer' is defined but never used                                no-unused-vars
+   6342:67   error  'targetInst' is defined but never used                                     no-unused-vars
+   6370:107  error  'eventSystemFlags' is defined but never used                               no-unused-vars
+   6370:125  error  'targetContainer' is defined but never used                                no-unused-vars
+   6405:107  error  'eventSystemFlags' is defined but never used                               no-unused-vars
+   6405:125  error  'targetContainer' is defined but never used                                no-unused-vars
+   6554:25   error  Unexpected constant condition                                              no-constant-condition
+   6556:20   error  Unexpected constant condition                                              no-constant-condition
+   6572:20   error  Unexpected constant condition                                              no-constant-condition
+   6695:20   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   6789:107  error  'eventSystemFlags' is defined but never used                               no-unused-vars
+   6789:125  error  'targetContainer' is defined but never used                                no-unused-vars
+   6817:13   error  Expected a 'break' statement before 'case'                                 no-fallthrough
+   6856:27   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   6887:125  error  'targetContainer' is defined but never used                                no-unused-vars
+   6899:13   error  Expected a 'break' statement before 'case'                                 no-fallthrough
+   6919:13   error  Expected a 'break' statement before 'case'                                 no-fallthrough
+   6997:125  error  'targetContainer' is defined but never used                                no-unused-vars
+   7045:100  error  'targetContainer' is defined but never used                                no-unused-vars
+   7098:115  error  'isDeferredListenerForLegacyFBSupport' is defined but never used           no-unused-vars
+   7106:29   error  'targetContainer' is assigned to itself                                    no-self-assign
+   7118:15   error  'unsubscribeListener' is assigned a value but never used                   no-unused-vars
+   7131:32   error  Unexpected constant condition                                              no-constant-condition
+   7182:128  error  'nativeEvent' is defined but never used                                    no-unused-vars
+   7387:52   error  Unexpected control character(s) in regular expression: \x00                no-control-regex
+   7423:28   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7450:51   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7496:41   error  Unnecessary escape character: \/                                           no-useless-escape
+   7616:78   error  'rootContainerElement' is defined but never used                           no-unused-vars
+   7652:27   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7652:65   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7658:31   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7668:51   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7679:28   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7690:32   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7690:85   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7698:32   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7727:51   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7773:40   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7850:27   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7870:53   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   7970:51   error  'isConcurrentMode' is defined but never used                               no-unused-vars
+   7992:66   error  'props' is defined but never used                                          no-unused-vars
+   8295:63   error  'rootContainerInstance' is defined but never used                          no-unused-vars
+   8309:35   error  'containerInfo' is defined but never used                                  no-unused-vars
+   8316:35   error  'containerInfo' is defined but never used                                  no-unused-vars
+   8342:90   error  'hostContext' is defined but never used                                    no-unused-vars
+   8398:58   error  'internalInstanceHandle' is defined but never used                         no-unused-vars
+   8416:84   error  'internalInstanceHandle' is defined but never used                         no-unused-vars
+   8496:22   error  'instance' is assigned to itself                                           no-self-assign
+   8508:22   error  'instance' is assigned to itself                                           no-self-assign
+   8510:81   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   8525:53   error  'props' is defined but never used                                          no-unused-vars
+   8611:82   error  'shouldWarnDev' is defined but never used                                  no-unused-vars
+   8613:15   error  'isConcurrentMode' is assigned a value but never used                      no-unused-vars
+   8713:85   error  'props' is defined but never used                                          no-unused-vars
+   8723:91   error  'props' is defined but never used                                          no-unused-vars
+   9148:34   error  'workInProgress2' is defined but never used                                no-unused-vars
+   9349:25   error  'props' is assigned a value but never used                                 no-unused-vars
+   9401:25   error  '_props2' is assigned a value but never used                               no-unused-vars
+   9424:19   error  'props' is assigned a value but never used                                 no-unused-vars
+   9470:43   error  'fiber' is defined but never used                                          no-unused-vars
+   9648:51   error  'fiber' is defined but never used                                          no-unused-vars
+   9648:58   error  'instance' is defined but never used                                       no-unused-vars
+   9652:48   error  'fiber' is defined but never used                                          no-unused-vars
+   9652:55   error  'instance' is defined but never used                                       no-unused-vars
+   9804:70   error  'strictRoot' is defined but never used                                     no-unused-vars
+   9838:42   error  'child' is defined but never used                                          no-unused-vars
+   9838:49   error  'returnFiber' is defined but never used                                    no-unused-vars
+  10845:85   error  'lane' is defined but never used                                           no-unused-vars
+  11080:13   error  Expected a 'break' statement before 'case'                                 no-fallthrough
+  11217:22   error  Unexpected constant condition                                              no-constant-condition
+  11300:15   error  'rootInstance' is assigned a value but never used                          no-unused-vars
+  11339:57   error  'hasInvisibleParent' is defined but never used                             no-unused-vars
+  11347:15   error  'props' is assigned a value but never used                                 no-unused-vars
+  11724:41   error  'initialArg' is defined but never used                                     no-unused-vars
+  11724:53   error  'init' is defined but never used                                           no-unused-vars
+  11825:43   error  'initialArg' is defined but never used                                     no-unused-vars
+  11825:55   error  'init' is defined but never used                                           no-unused-vars
+  11855:37   error  'source' is defined but never used                                         no-unused-vars
+  11855:45   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  11855:58   error  'subscribe' is defined but never used                                      no-unused-vars
+  11860:38   error  'source' is defined but never used                                         no-unused-vars
+  11860:46   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  11860:59   error  'subscribe' is defined but never used                                      no-unused-vars
+  11913:66   error  'getServerSnapshot' is defined but never used                              no-unused-vars
+  12018:30   error  'initialState' is defined but never used                                   no-unused-vars
+  12021:32   error  'initialState' is defined but never used                                   no-unused-vars
+  12061:28   error  'initialValue' is defined but never used                                   no-unused-vars
+  12129:30   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  12165:34   error  'value' is defined but never used                                          no-unused-vars
+  12165:41   error  'formatterFn' is defined but never used                                    no-unused-vars
+  12252:56   error  'options2' is defined but never used                                       no-unused-vars
+  12390:34   error  Empty block statement                                                      no-empty
+  12431:52   error  'action' is defined but never used                                         no-unused-vars
+  12548:37   error  'value' is defined but never used                                          no-unused-vars
+  12548:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  12563:40   error  'source' is defined but never used                                         no-unused-vars
+  12563:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  12563:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  12652:37   error  'value' is defined but never used                                          no-unused-vars
+  12652:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  12667:40   error  'source' is defined but never used                                         no-unused-vars
+  12667:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  12667:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  12740:30   error  'initialValue' is defined but never used                                   no-unused-vars
+  12756:37   error  'value' is defined but never used                                          no-unused-vars
+  12756:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  12771:40   error  'source' is defined but never used                                         no-unused-vars
+  12771:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  12771:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  12776:68   error  'getServerSnapshot' is defined but never used                              no-unused-vars
+  12844:30   error  'initialValue' is defined but never used                                   no-unused-vars
+  12860:37   error  'value' is defined but never used                                          no-unused-vars
+  12860:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  12875:40   error  'source' is defined but never used                                         no-unused-vars
+  12875:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  12875:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  12880:68   error  'getServerSnapshot' is defined but never used                              no-unused-vars
+  12975:37   error  'value' is defined but never used                                          no-unused-vars
+  12975:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  12993:40   error  'source' is defined but never used                                         no-unused-vars
+  12993:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  12993:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  13078:30   error  'initialValue' is defined but never used                                   no-unused-vars
+  13096:37   error  'value' is defined but never used                                          no-unused-vars
+  13096:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  13114:40   error  'source' is defined but never used                                         no-unused-vars
+  13114:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  13114:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  13120:68   error  'getServerSnapshot' is defined but never used                              no-unused-vars
+  13199:30   error  'initialValue' is defined but never used                                   no-unused-vars
+  13217:37   error  'value' is defined but never used                                          no-unused-vars
+  13217:44   error  'formatterFn' is defined but never used                                    no-unused-vars
+  13235:40   error  'source' is defined but never used                                         no-unused-vars
+  13235:48   error  'getSnapshot' is defined but never used                                    no-unused-vars
+  13235:61   error  'subscribe' is defined but never used                                      no-unused-vars
+  13241:68   error  'getServerSnapshot' is defined but never used                              no-unused-vars
+  13295:45   error  'fiber' is defined but never used                                          no-unused-vars
+  14000:34   error  'boundary' is defined but never used                                       no-unused-vars
+  14000:44   error  'errorInfo' is defined but never used                                      no-unused-vars
+  14010:17   error  Unexpected constant condition                                              no-constant-condition
+  14121:73   error  'lanes' is defined but never used                                          no-unused-vars
+  14131:55   error  'rootRenderLanes' is defined but never used                                no-unused-vars
+  14744:15   error  'root2' is assigned a value but never used                                 no-unused-vars
+  15057:68   error  'workInProgress2' is defined but never used                                no-unused-vars
+  15057:85   error  'renderLanes2' is defined but never used                                   no-unused-vars
+  15137:81   error  'renderLanes2' is defined but never used                                   no-unused-vars
+  15178:74   error  'renderLanes2' is defined but never used                                   no-unused-vars
+  15286:86   error  'renderLanes2' is defined but never used                                   no-unused-vars
+  15784:19   error  'root2' is assigned a value but never used                                 no-unused-vars
+  16012:65   error  'needsVisibilityToggle' is defined but never used                          no-unused-vars
+  16012:88   error  'isHidden' is defined but never used                                       no-unused-vars
+  16036:42   error  'current2' is defined but never used                                       no-unused-vars
+  16036:52   error  'workInProgress2' is defined but never used                                no-unused-vars
+  16541:56   error  'renderLanes2' is defined but never used                                   no-unused-vars
+  16560:19   error  'root2' is assigned a value but never used                                 no-unused-vars
+  16615:67   error  'renderLanes2' is defined but never used                                   no-unused-vars
+  16626:19   error  'root2' is assigned a value but never used                                 no-unused-vars
+  16751:13   error  'focusedInstanceHandle' is assigned a value but never used                 no-unused-vars
+  16990:82   error  'committedLanes' is defined but never used                                 no-unused-vars
+  17206:20   error  Unexpected constant condition                                              no-constant-condition
+  17291:26   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  17352:28   error  Unexpected constant condition                                              no-constant-condition
+  17496:13   error  Expected a 'break' statement before 'case'                                 no-fallthrough
+  17614:15   error  'newState' is assigned a value but never used                              no-unused-vars
+  17666:73   error  'lanes' is defined but never used                                          no-unused-vars
+  17689:68   error  'lanes' is defined but never used                                          no-unused-vars
+  18146:72   error  'committedLanes' is defined but never used                                 no-unused-vars
+  18146:88   error  'committedTransitions' is defined but never used                           no-unused-vars
+  18376:11   error  'COMPONENT_TYPE' is assigned a value but never used                        no-unused-vars
+  18377:11   error  'HAS_PSEUDO_CLASS_TYPE' is assigned a value but never used                 no-unused-vars
+  18378:11   error  'ROLE_TYPE' is assigned a value but never used                             no-unused-vars
+  18379:11   error  'TEST_NAME_TYPE' is assigned a value but never used                        no-unused-vars
+  18380:11   error  'TEXT_TYPE' is assigned a value but never used                             no-unused-vars
+  18391:41   error  'fiber' is defined but never used                                          no-unused-vars
+  18395:65   error  'IS_REACT_ACT_ENVIRONMENT' is not defined                                  no-undef
+  18405:65   error  'IS_REACT_ACT_ENVIRONMENT' is not defined                                  no-undef
+  18574:49   error  'fiber' is defined but never used                                          no-unused-vars
+  18773:25   error  'eventTime' is assigned a value but never used                             no-unused-vars
+  18813:18   error  Unexpected constant condition                                              no-constant-condition
+  18852:11   error  Unreachable code                                                           no-unreachable
+  19045:20   error  Unexpected constant condition                                              no-constant-condition
+  19119:20   error  Unexpected constant condition                                              no-constant-condition
+  19167:20   error  Unexpected constant condition                                              no-constant-condition
+  19341:17   error  'shouldFireAfterActiveInstanceBlur2' is assigned a value but never used    no-unused-vars
+  20122:20   error  Unexpected constant condition                                              no-constant-condition
+  20145:20   error  Unexpected constant condition                                              no-constant-condition
+  20167:11   error  Unreachable code                                                           no-unreachable
+  20348:57   error  'concurrentUpdatesByDefaultOverride' is defined but never used             no-unused-vars
+  20626:189  error  'transitionCallbacks' is defined but never used                            no-unused-vars
+  20719:162  error  'transitionCallbacks' is defined but never used                            no-unused-vars
+  20724:198  error  'transitionCallbacks' is defined but never used                            no-unused-vars
+  20859:40   error  'fiber' is defined but never used                                          no-unused-vars
+  20865:42   error  'fiber' is defined but never used                                          no-unused-vars
+  21043:47   error  'instance' is defined but never used                                       no-unused-vars
+  21167:15   error  'transitionCallbacks' is assigned a value but never used                   no-unused-vars
+  21310:20   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+  21566:77   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+  21567:11   error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+  21578:9    error  Unexpected constant condition                                              no-constant-condition
+  21579:7    error  'checkDCE' is not defined                                                  no-undef
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/.vite/deps/chunk-UTEJFLXC.js
+    31:9   error  Unexpected constant condition                                              no-constant-condition
+    34:77  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    35:11  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+   182:31  error  'publicInstance' is defined but never used                                 no-unused-vars
+   200:56  error  'callback' is defined but never used                                       no-unused-vars
+   200:66  error  'callerName' is defined but never used                                     no-unused-vars
+   216:57  error  'completeState' is defined but never used                                  no-unused-vars
+   216:72  error  'callback' is defined but never used                                       no-unused-vars
+   216:82  error  'callerName' is defined but never used                                     no-unused-vars
+   231:53  error  'partialState' is defined but never used                                   no-unused-vars
+   231:67  error  'callback' is defined but never used                                       no-unused-vars
+   231:77  error  'callerName' is defined but never used                                     no-unused-vars
+   270:32  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   535:76  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   607:76  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   706:21  error  Definition for rule 'react-internal/safe-string-coercion' was not found    react-internal/safe-string-coercion
+  1224:54  error  'source' is defined but never used                                         no-unused-vars
+  1224:62  error  'ownerFn' is defined but never used                                        no-unused-vars
+  1346:53  error  'source' is defined but never used                                         no-unused-vars
+  1346:61  error  'ownerFn' is defined but never used                                        no-unused-vars
+  1385:29  error  Empty block statement                                                      no-empty
+  1462:59  error  Unnecessary escape character: \/                                           no-useless-escape
+  1583:59  error  'children' is defined but never used                                       no-unused-vars
+  1649:45  error  'element' is defined but never used                                        no-unused-vars
+  1649:54  error  'props' is defined but never used                                          no-unused-vars
+  1649:61  error  'children' is defined but never used                                       no-unused-vars
+  1657:41  error  'options' is defined but never used                                        no-unused-vars
+  1785:43  error  'reject' is defined but never used                                         no-unused-vars
+  1893:77  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+  1894:11  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+  1904:9   error  Unexpected constant condition                                              no-constant-condition
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/.vite/deps/react-dom_client.js
+  12:9  error  Unexpected constant condition  no-constant-condition
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/.vite/deps/react-router-dom.js
+    18:3    error  '_extends' is a function                                                                          no-func-assign
+   215:17   error  Empty block statement                                                                             no-empty
+  2484:12   error  Unexpected constant condition                                                                     no-constant-condition
+  2584:5    error  'UNSAFE_DEFERRED_SYMBOL' is assigned a value but never used                                       no-unused-vars
+  3316:23   error  Do not access Object.prototype method 'hasOwnProperty' from target object                         no-prototype-builtins
+  3323:26   error  Do not access Object.prototype method 'hasOwnProperty' from target object                         no-prototype-builtins
+  3660:15   error  Empty block statement                                                                             no-empty
+  3679:3    error  '_extends2' is a function                                                                         no-func-assign
+  3693:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3697:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3701:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3705:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3709:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3717:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3721:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3728:27   error  Unexpected constant condition                                                                     no-constant-condition
+  3759:27   error  Unexpected constant condition                                                                     no-constant-condition
+  3771:27   error  Unexpected constant condition                                                                     no-constant-condition
+  3796:27   error  Unexpected constant condition                                                                     no-constant-condition
+  3823:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3833:6    error  Redundant double negation                                                                         no-extra-boolean-cast
+  3877:27   error  Unexpected constant condition                                                                     no-constant-condition
+  3894:7    error  Unexpected constant condition                                                                     no-constant-condition
+  3905:167  error  Unexpected constant condition                                                                     no-constant-condition
+  3920:7    error  Unexpected constant condition                                                                     no-constant-condition
+  3921:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3922:5    error  Unexpected constant condition                                                                     no-constant-condition
+  3967:7    error  Unexpected constant condition                                                                     no-constant-condition
+  3984:27   error  Component definition is missing display name                                                      react/display-name
+  3988:23   error  'location' is missing in props validation                                                         react/prop-types
+  3989:27   error  'revalidation' is missing in props validation                                                     react/prop-types
+  3990:20   error  'error' is missing in props validation                                                            react/prop-types
+  3999:34   error  'location' is missing in props validation                                                         react/prop-types
+  3999:85   error  'revalidation' is missing in props validation                                                     react/prop-types
+  4001:22   error  'error' is missing in props validation                                                            react/prop-types
+  4002:25   error  'location' is missing in props validation                                                         react/prop-types
+  4003:29   error  'revalidation' is missing in props validation                                                     react/prop-types
+  4007:20   error  'error' is missing in props validation                                                            react/prop-types
+  4007:45   error  'error' is missing in props validation                                                            react/prop-types
+  4009:27   error  'revalidation' is missing in props validation                                                     react/prop-types
+  4017:25   error  'routeContext' is missing in props validation                                                     react/prop-types
+  4018:8    error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4020:28   error  'component' is missing in props validation                                                        react/prop-types
+  4021:22   error  'children' is missing in props validation                                                         react/prop-types
+  4066:26   error  Unexpected constant condition                                                                     no-constant-condition
+  4128:14   error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4138:104  error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4176:10   error  Unexpected constant condition                                                                     no-constant-condition
+  4181:12   error  Unexpected constant condition                                                                     no-constant-condition
+  4186:12   error  Unexpected constant condition                                                                     no-constant-condition
+  4192:25   error  Unexpected constant condition                                                                     no-constant-condition
+  4308:5    error  Unexpected constant condition                                                                     no-constant-condition
+  4324:5    error  Unexpected constant condition                                                                     no-constant-condition
+  4357:10   error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4373:27   error  Unexpected constant condition                                                                     no-constant-condition
+  4383:3    error  Unexpected constant condition                                                                     no-constant-condition
+  4403:16   error  '_props' is defined but never used                                                                no-unused-vars
+  4404:3    error  Unexpected constant condition                                                                     no-constant-condition
+  4416:3    error  Redundant double negation                                                                         no-extra-boolean-cast
+  4416:28   error  Unexpected constant condition                                                                     no-constant-condition
+  4452:3    error  Unexpected constant condition                                                                     no-constant-condition
+  4458:6    error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4489:26   error  Component definition is missing display name                                                      react/display-name
+  4506:7    error  'children' is missing in props validation                                                         react/prop-types
+  4507:7    error  'errorElement' is missing in props validation                                                     react/prop-types
+  4508:7    error  'resolve' is missing in props validation                                                          react/prop-types
+  4532:24   error  'resolve._tracked' is missing in props validation                                                 react/prop-types
+  4540:25   error  'resolve.then' is missing in props validation                                                     react/prop-types
+  4553:14   error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4559:14   error  Do not pass children as props. Instead, pass them as additional arguments to React.createElement  react/no-children-prop
+  4589:33   error  Unexpected constant condition                                                                     no-constant-condition
+  4590:58   error  Unexpected constant condition                                                                     no-constant-condition
+  4624:9    error  Unexpected constant condition                                                                     no-constant-condition
+  4626:9    error  Unexpected constant condition                                                                     no-constant-condition
+  4635:9    error  Unexpected constant condition                                                                     no-constant-condition
+  4637:9    error  Unexpected constant condition                                                                     no-constant-condition
+  4646:9    error  Unexpected constant condition                                                                     no-constant-condition
+  4648:9    error  Unexpected constant condition                                                                     no-constant-condition
+  4678:3    error  '_extends3' is a function                                                                         no-func-assign
+  4766:5    error  Unexpected constant condition                                                                     no-constant-condition
+  4833:13   error  Empty block statement                                                                             no-empty
+  4894:23   error  Empty block statement                                                                             no-empty
+  4912:5    error  Unexpected constant condition                                                                     no-constant-condition
+  4916:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5094:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5248:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5283:9    error  Unexpected constant condition                                                                     no-constant-condition
+  5305:5    error  Definition for rule 'jsx-a11y/anchor-has-content' was not found                                   jsx-a11y/anchor-has-content
+  5314:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5338:3    error  Definition for rule 'react-hooks/rules-of-hooks' was not found                                    react-hooks/rules-of-hooks
+  5376:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5422:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5436:5    error  Unexpected constant condition                                                                     no-constant-condition
+  5458:10   error  Unexpected constant condition                                                                     no-constant-condition
+  5463:12   error  Unexpected constant condition                                                                     no-constant-condition
+  5495:3    error  Unexpected constant condition                                                                     no-constant-condition
+  5574:19   error  Unexpected constant condition                                                                     no-constant-condition
+  5608:18   error  Unexpected constant condition                                                                     no-constant-condition
+  5609:12   error  Unexpected constant condition                                                                     no-constant-condition
+  5610:24   error  Unexpected constant condition                                                                     no-constant-condition
+  5625:16   error  Unexpected constant condition                                                                     no-constant-condition
+  5643:9    error  Unexpected constant condition                                                                     no-constant-condition
+  5702:7    error  Unexpected constant condition                                                                     no-constant-condition
+  5713:19   error  Empty block statement                                                                             no-empty
+  5804:26   error  Unexpected constant condition                                                                     no-constant-condition
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/dist/assets/index-C9-0gJoD.js
+     9:1588   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+     9:4646   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    17:376    error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    25:948    error  'setImmediate' is not defined                                              no-undef
+    33:596    error  Unexpected combined character in character class                           no-misleading-character-class
+    33:3023   error  Unnecessary escape character: \-                                           no-useless-escape
+    33:4912   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:202    error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    37:1216   error  Empty block statement                                                      no-empty
+    37:2389   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:3869   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:3910   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:4077   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:4104   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:4695   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:6032   error  'MSApp' is not defined                                                     no-undef
+    37:6080   error  'MSApp' is not defined                                                     no-undef
+    37:7460   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:7553   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:8636   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    37:9657   error  Expected to return a value in method 'get'                                 getter-return
+    37:9790   error  'r' is defined but never used                                              no-unused-vars
+    37:9792   error  'i' is defined but never used                                              no-unused-vars
+    37:9794   error  's' is defined but never used                                              no-unused-vars
+    37:9796   error  'o' is defined but never used                                              no-unused-vars
+    37:9798   error  'l' is defined but never used                                              no-unused-vars
+    37:9800   error  'u' is defined but never used                                              no-unused-vars
+    37:9973   error  't' is defined but never used                                              no-unused-vars
+    37:9975   error  'e' is defined but never used                                              no-unused-vars
+    37:9977   error  'n' is defined but never used                                              no-unused-vars
+    37:9979   error  'r' is defined but never used                                              no-unused-vars
+    37:9981   error  'i' is defined but never used                                              no-unused-vars
+    37:9983   error  's' is defined but never used                                              no-unused-vars
+    37:9985   error  'o' is defined but never used                                              no-unused-vars
+    37:9987   error  'l' is defined but never used                                              no-unused-vars
+    37:9989   error  'u' is defined but never used                                              no-unused-vars
+    37:10041  error  't' is defined but never used                                              no-unused-vars
+    37:10043  error  'e' is defined but never used                                              no-unused-vars
+    37:10045  error  'n' is defined but never used                                              no-unused-vars
+    37:10047  error  'r' is defined but never used                                              no-unused-vars
+    37:10049  error  'i' is defined but never used                                              no-unused-vars
+    37:10051  error  's' is defined but never used                                              no-unused-vars
+    37:10053  error  'o' is defined but never used                                              no-unused-vars
+    37:10055  error  'l' is defined but never used                                              no-unused-vars
+    37:10057  error  'u' is defined but never used                                              no-unused-vars
+    37:11890  error  Empty block statement                                                      no-empty
+    37:19777  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:20120  error  Invalid typeof comparison value                                            valid-typeof
+    37:20294  error  Invalid typeof comparison value                                            valid-typeof
+    37:22166  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    37:27711  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    37:29177  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    37:33278  error  Expected a 'break' statement before 'case'                                 no-fallthrough
+    37:33465  error  Expected a 'break' statement before 'case'                                 no-fallthrough
+    37:34582  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    37:36027  error  Expected a 'break' statement before 'case'                                 no-fallthrough
+    37:37457  error  Unexpected control character(s) in regular expression: \x00                no-control-regex
+    38:1506   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    38:1606   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    38:14667  error  Expected a 'break' statement before 'case'                                 no-fallthrough
+    38:15124  error  Unexpected constant condition                                              no-constant-condition
+    38:15718  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    38:22290  error  Empty block statement                                                      no-empty
+    38:22299  error  Empty block statement                                                      no-empty
+    38:25675  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    38:26538  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    40:3968   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    40:5090   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    40:12874  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:12895  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:12965  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:13147  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:13249  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:13329  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:13353  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:13405  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:13760  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:15957  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:16236  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:16683  error  Unnecessary escape character: \/                                           no-useless-escape
+    40:17565  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:17874  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:25897  error  Empty block statement                                                      no-empty
+    40:25932  error  Expected a 'break' statement before 'case'                                 no-fallthrough
+    40:30010  error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+    40:30990  error  'e' is defined but never used                                              no-unused-vars
+    40:30992  error  'n' is defined but never used                                              no-unused-vars
+    40:31019  error  'e' is defined but never used                                              no-unused-vars
+    40:31021  error  'n' is defined but never used                                              no-unused-vars
+    40:34722  error  Unexpected constant condition                                              no-constant-condition
+    40:39250  error  Unexpected constant condition                                              no-constant-condition
+    40:39542  error  Unexpected constant condition                                              no-constant-condition
+    40:42550  error  Empty block statement                                                      no-empty
+    40:52971  error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+    40:54377  error  'Cg' is a function                                                         no-func-assign
+    40:54383  error  'Ag' is a function                                                         no-func-assign
+    40:55301  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    40:55400  error  Empty block statement                                                      no-empty
+    40:57433  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    40:57490  error  '__REACT_DEVTOOLS_GLOBAL_HOOK__' is not defined                            no-undef
+    49:25     error  'Os' is a function                                                         no-func-assign
+    49:761    error  Empty block statement                                                      no-empty
+    58:25     error  'Ms' is a function                                                         no-func-assign
+    58:6096   error  't' is defined but never used                                              no-unused-vars
+    58:6153   error  't' is defined but never used                                              no-unused-vars
+    58:6210   error  't' is defined but never used                                              no-unused-vars
+    58:6267   error  't' is defined but never used                                              no-unused-vars
+    58:6764   error  't' is defined but never used                                              no-unused-vars
+    67:25     error  'ja' is a function                                                         no-func-assign
+    67:784    error  Empty block statement                                                      no-empty
+    67:1855   error  Empty block statement                                                      no-empty
+    67:3520   error  't' is defined but never used                                              no-unused-vars
+    72:52     error  Unexpected control character(s) in regular expression: \x09                no-control-regex
+    72:2218   error  'global' is not defined                                                    no-undef
+    72:2501   error  Empty block statement                                                      no-empty
+   109:112    error  'global' is not defined                                                    no-undef
+   169:280    error  'global' is not defined                                                    no-undef
+   229:464    error  Empty block statement                                                      no-empty
+   229:1244   error  Empty block statement                                                      no-empty
+   229:1423   error  Empty block statement                                                      no-empty
+   229:2678   error  Empty block statement                                                      no-empty
+   229:3062   error  Empty block statement                                                      no-empty
+   409:258    error  'global' is not defined                                                    no-undef
+   416:134    error  'k' is defined but never used                                              no-unused-vars
+   416:10424  error  'o.prototype.add' is assigned to itself                                    no-self-assign
+   416:10598  error  'o.prototype.toString' is assigned to itself                               no-self-assign
+   416:10846  error  'global' is not defined                                                    no-undef
+   423:252    error  'c' is defined but never used                                              no-unused-vars
+   423:254    error  'f' is defined but never used                                              no-unused-vars
+   423:310    error  'f' is defined but never used                                              no-unused-vars
+   423:578    error  'a' is defined but never used                                              no-unused-vars
+   423:580    error  'c' is defined but never used                                              no-unused-vars
+   423:582    error  'f' is defined but never used                                              no-unused-vars
+   423:592    error  'g' is a function                                                          no-func-assign
+   423:722    error  'c' is defined but never used                                              no-unused-vars
+   423:988    error  'L' is defined but never used                                              no-unused-vars
+   423:1230   error  'c' is defined but never used                                              no-unused-vars
+   423:2184   error  'c' is defined but never used                                              no-unused-vars
+   423:3019   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   423:3136   error  'this.s' is assigned to itself                                             no-self-assign
+   423:3150   error  'this.C' is assigned to itself                                             no-self-assign
+   423:3554   error  Expected to return a value in method 'get'                                 getter-return
+   423:3666   error  Empty block statement                                                      no-empty
+   423:4177   error  Empty block statement                                                      no-empty
+   423:7322   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   423:9270   error  'c' is defined but never used                                              no-unused-vars
+   423:9507   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+   423:10176  error  'a' is defined but never used                                              no-unused-vars
+   427:2768   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   427:3832   error  Empty block statement                                                      no-empty
+   427:3841   error  Empty block statement                                                      no-empty
+   428:1050   error  Empty block statement                                                      no-empty
+   428:2192   error  Empty block statement                                                      no-empty
+   428:6162   error  Unnecessary escape character: \/                                           no-useless-escape
+   428:6164   error  Unnecessary escape character: \?                                           no-useless-escape
+   428:6177   error  Unnecessary escape character: \?                                           no-useless-escape
+   428:6190   error  Unnecessary escape character: \?                                           no-useless-escape
+   428:6202   error  Unnecessary escape character: \?                                           no-useless-escape
+   428:8750   error  Empty block statement                                                      no-empty
+   430:2349   error  Expected a conditional expression and instead saw an assignment            no-cond-assign
+   430:2774   error  Empty block statement                                                      no-empty
+   431:1849   error  Empty block statement                                                      no-empty
+   431:8628   error  'a' is defined but never used                                              no-unused-vars
+   431:8823   error  'pt.prototype.close' is assigned to itself                                 no-self-assign
+   506:134    error  'e' is defined but never used                                              no-unused-vars
+   506:157    error  'e' is defined but never used                                              no-unused-vars
+   686:954    error  'r' is defined but never used                                              no-unused-vars
+   731:4786   error  'e' is defined but never used                                              no-unused-vars
+   731:4788   error  'n' is defined but never used                                              no-unused-vars
+   731:4790   error  'r' is defined but never used                                              no-unused-vars
+   731:4792   error  'i' is defined but never used                                              no-unused-vars
+   731:4794   error  's' is defined but never used                                              no-unused-vars
+   731:4820   error  'r' is defined but never used                                              no-unused-vars
+   731:4849   error  'e' is defined but never used                                              no-unused-vars
+   731:4851   error  'n' is defined but never used                                              no-unused-vars
+   731:4902   error  'e' is defined but never used                                              no-unused-vars
+   731:4931   error  'e' is defined but never used                                              no-unused-vars
+   746:298    error  'r' is defined but never used                                              no-unused-vars
+   836:1671   error  Do not access Object.prototype method 'hasOwnProperty' from target object  no-prototype-builtins
+  1124:6639   error  'Buffer' is not defined                                                    no-undef
+  1124:11147  error  Unexpected lexical declaration in case block                               no-case-declarations
+  1124:11236  error  Unexpected lexical declaration in case block                               no-case-declarations
+  1124:11335  error  Unexpected lexical declaration in case block                               no-case-declarations
+  1124:11428  error  Unexpected lexical declaration in case block                               no-case-declarations
+  1169:188    error  'e' is defined but never used                                              no-unused-vars
+  1169:190    error  'n' is defined but never used                                              no-unused-vars
+  1169:229    error  'e' is defined but never used                                              no-unused-vars
+  1169:231    error  'n' is defined but never used                                              no-unused-vars
+  1169:275    error  'e' is defined but never used                                              no-unused-vars
+  1169:317    error  'e' is defined but never used                                              no-unused-vars
+  1169:319    error  'n' is defined but never used                                              no-unused-vars
+  1169:368    error  'e' is defined but never used                                              no-unused-vars
+  1169:370    error  'n' is defined but never used                                              no-unused-vars
+  1169:409    error  'e' is defined but never used                                              no-unused-vars
+  1169:411    error  'n' is defined but never used                                              no-unused-vars
+  1169:450    error  'e' is defined but never used                                              no-unused-vars
+  1169:452    error  'n' is defined but never used                                              no-unused-vars
+  1169:507    error  'e' is defined but never used                                              no-unused-vars
+  1169:546    error  'e' is defined but never used                                              no-unused-vars
+  1169:548    error  'n' is defined but never used                                              no-unused-vars
+  1169:610    error  'e' is defined but never used                                              no-unused-vars
+  1169:612    error  'n' is defined but never used                                              no-unused-vars
+  1169:664    error  'e' is defined but never used                                              no-unused-vars
+  1169:666    error  'n' is defined but never used                                              no-unused-vars
+  1169:668    error  'r' is defined but never used                                              no-unused-vars
+  1169:709    error  'e' is defined but never used                                              no-unused-vars
+  1169:711    error  'n' is defined but never used                                              no-unused-vars
+  1289:82     error  'e' is defined but never used                                              no-unused-vars
+  1319:140    error  'e' is defined but never used                                              no-unused-vars
+  1319:831    error  'e' is defined but never used                                              no-unused-vars
+  1319:1938   error  'e' is defined but never used                                              no-unused-vars
+  1319:2072   error  'e' is defined but never used                                              no-unused-vars
+  1319:2125   error  'n' is defined but never used                                              no-unused-vars
+  1334:1077   error  'e' is defined but never used                                              no-unused-vars
+  1334:1079   error  'n' is defined but never used                                              no-unused-vars
+  1334:1081   error  'r' is defined but never used                                              no-unused-vars
+  1334:1083   error  'i' is defined but never used                                              no-unused-vars
+  1334:1150   error  'e' is defined but never used                                              no-unused-vars
+  1334:1181   error  'e' is defined but never used                                              no-unused-vars
+  1349:293    error  'e' is defined but never used                                              no-unused-vars
+  1349:370    error  'e' is defined but never used                                              no-unused-vars
+  1349:416    error  'e' is defined but never used                                              no-unused-vars
+  1349:1240   error  'e' is defined but never used                                              no-unused-vars
+  1364:512    error  'e' is defined but never used                                              no-unused-vars
+  1364:2337   error  'e' is defined but never used                                              no-unused-vars
+  1424:3651   error  'p' is defined but never used                                              no-unused-vars
+  1424:6406   error  'e' is defined but never used                                              no-unused-vars
+  1424:6430   error  'e' is defined but never used                                              no-unused-vars
+  1424:6432   error  'n' is defined but never used                                              no-unused-vars
+  1424:6434   error  'r' is defined but never used                                              no-unused-vars
+  1424:6537   error  'r' is defined but never used                                              no-unused-vars
+  1424:6874   error  'e' is defined but never used                                              no-unused-vars
+  1424:6876   error  'n' is defined but never used                                              no-unused-vars
+  1424:6878   error  'r' is defined but never used                                              no-unused-vars
+  1424:6897   error  'e' is defined but never used                                              no-unused-vars
+  1424:6933   error  'e' is defined but never used                                              no-unused-vars
+  1424:6956   error  'e' is defined but never used                                              no-unused-vars
+  1439:16     error  'e' is defined but never used                                              no-unused-vars
+  1514:835    error  'l' is defined but never used                                              no-unused-vars
+  1514:1552   error  Unexpected lexical declaration in case block                               no-case-declarations
+  1514:1775   error  Unexpected lexical declaration in case block                               no-case-declarations
+  1590:185    error  'o' is defined but never used                                              no-unused-vars
+  1590:1434   error  'n' is defined but never used                                              no-unused-vars
+  1605:236    error  'o' is defined but never used                                              no-unused-vars
+  1620:582    error  'r' is defined but never used                                              no-unused-vars
+  1668:2187   error  'n' is defined but never used                                              no-unused-vars
+  1668:11979  error  'e' is defined but never used                                              no-unused-vars
+  1668:11981  error  'n' is defined but never used                                              no-unused-vars
+  1668:12027  error  'e' is defined but never used                                              no-unused-vars
+  1668:12029  error  'n' is defined but never used                                              no-unused-vars
+  1668:12147  error  'e' is defined but never used                                              no-unused-vars
+  1668:12211  error  'e' is defined but never used                                              no-unused-vars
+  1668:12975  error  'e' is defined but never used                                              no-unused-vars
+  1804:947    error  'e' is defined but never used                                              no-unused-vars
+  1894:1168   error  'e' is defined but never used                                              no-unused-vars
+  1924:5033   error  Unexpected lexical declaration in case block                               no-case-declarations
+  1939:20     error  'n' is defined but never used                                              no-unused-vars
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/App.jsx
+  11:5   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  12:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  13:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  14:11  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  15:11  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/Cart/Cart.jsx
+   83:5   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   84:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   85:22  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   87:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   89:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   90:11  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   92:15  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   93:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   94:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   95:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   96:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   97:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   99:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  100:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  103:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  104:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  111:19  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  118:11  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  119:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  122:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  128:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  137:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/Cart/CartPresentation.jsx
+   4:3   error  'cart' is missing in props validation              react/prop-types
+   5:3   error  'stockInfo' is missing in props validation         react/prop-types
+   6:3   error  'increaseQuantity' is missing in props validation  react/prop-types
+   7:3   error  'decreaseQuantity' is missing in props validation  react/prop-types
+   8:3   error  'removeFromCart' is missing in props validation    react/prop-types
+   9:3   error  'emptyCart' is missing in props validation         react/prop-types
+  10:3   error  'checkout' is missing in props validation          react/prop-types
+  13:5   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  13:21  error  'styles' is not defined                            no-undef
+  14:7   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  15:13  error  'cart.length' is missing in props validation       react/prop-types
+  16:9   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  18:9   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  18:25  error  'styles' is not defined                            no-undef
+  19:17  error  'cart.map' is missing in props validation          react/prop-types
+  20:13  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  20:43  error  'styles' is not defined                            no-undef
+  21:15  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  22:15  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  22:31  error  'styles' is not defined                            no-undef
+  23:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  24:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  25:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  26:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  31:15  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  31:31  error  'styles' is not defined                            no-undef
+  32:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  33:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  33:73  error  'styles' is not defined                            no-undef
+  36:17  error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  47:7   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  47:23  error  'styles' is not defined                            no-undef
+  48:9   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  48:48  error  'styles' is not defined                            no-undef
+  51:9   error  'React' must be in scope when using JSX            react/react-in-jsx-scope
+  51:47  error  'styles' is not defined                            no-undef
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/CartWidget/CartWidget.jsx
+  20:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  21:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  22:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  23:23  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/ErrorMessage/ErrorMessage.jsx
+  6:32  error  'message' is missing in props validation  react/prop-types
+  8:5   error  'React' must be in scope when using JSX   react/react-in-jsx-scope
+  9:7   error  'React' must be in scope when using JSX   react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/FormField/FormField.jsx
+   5:29  error  'label' is missing in props validation     react/prop-types
+   5:36  error  'type' is missing in props validation      react/prop-types
+   5:42  error  'name' is missing in props validation      react/prop-types
+   5:48  error  'value' is missing in props validation     react/prop-types
+   5:55  error  'onChange' is missing in props validation  react/prop-types
+   5:65  error  'error' is missing in props validation     react/prop-types
+   7:5   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+   8:7   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  10:9   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  20:17  error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/Item/Item.jsx
+   6:24  error  'id' is missing in props validation           react/prop-types
+   6:28  error  'name' is missing in props validation         react/prop-types
+   6:34  error  'description' is missing in props validation  react/prop-types
+   6:47  error  'price' is missing in props validation        react/prop-types
+   6:54  error  'imageUrl' is missing in props validation     react/prop-types
+   6:64  error  'stock' is missing in props validation        react/prop-types
+   8:5   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+   9:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  10:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  15:25  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  17:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  18:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  19:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  20:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  21:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/ItemCount/ItemCount.jsx
+   5:10  error  'adjustQuantity' is defined but never used  no-unused-vars
+   8:29  error  'stock' is missing in props validation      react/prop-types
+   8:36  error  'initial' is missing in props validation    react/prop-types
+   8:45  error  'onAdd' is missing in props validation      react/prop-types
+   8:52  error  'productId' is missing in props validation  react/prop-types
+   8:63  error  'cart' is assigned a value but never used   no-unused-vars
+   8:63  error  'cart' is missing in props validation       react/prop-types
+  31:5   error  'React' must be in scope when using JSX     react/react-in-jsx-scope
+  32:7   error  'React' must be in scope when using JSX     react/react-in-jsx-scope
+  33:9   error  'React' must be in scope when using JSX     react/react-in-jsx-scope
+  36:9   error  'React' must be in scope when using JSX     react/react-in-jsx-scope
+  37:9   error  'React' must be in scope when using JSX     react/react-in-jsx-scope
+  41:7   error  'React' must be in scope when using JSX     react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/ItemDetail/ItemDetail.jsx
+  11:30  error  'id' is missing in props validation           react/prop-types
+  11:34  error  'name' is missing in props validation         react/prop-types
+  11:40  error  'description' is missing in props validation  react/prop-types
+  11:53  error  'price' is missing in props validation        react/prop-types
+  11:60  error  'imageUrl' is missing in props validation     react/prop-types
+  11:70  error  'stock' is missing in props validation        react/prop-types
+  32:5   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  33:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  34:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  39:25  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  41:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  42:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  43:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  44:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  48:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  50:20  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  52:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  53:11  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  54:11  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/ItemDetailContainer/ItemDetailContainer.jsx
+  34:5  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  36:5  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  38:5  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  40:5  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  41:7  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/ItemList/ItemList.jsx
+   7:28  error  'products' is missing in props validation  react/prop-types
+   9:9   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  12:21  error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  15:17  error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/ItemsListContainer/ItemsListContainer.jsx
+  10:38  error  'greeting' is missing in props validation  react/prop-types
+  33:5   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  35:5   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  37:5   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  39:5   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  40:7   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+  41:7   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/Modal/Modal.jsx
+   6:25  error  'isOpen' is missing in props validation       react/prop-types
+   6:33  error  'title' is missing in props validation        react/prop-types
+   6:40  error  'message' is missing in props validation      react/prop-types
+   6:49  error  'onConfirm' is missing in props validation    react/prop-types
+   6:60  error  'onCancel' is missing in props validation     react/prop-types
+   6:70  error  'confirmText' is missing in props validation  react/prop-types
+   6:83  error  'cancelText' is missing in props validation   react/prop-types
+  10:5   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  11:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  12:19  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  13:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  14:9   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  16:13  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  21:13  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/NavBar/NavBar.jsx
+  10:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  11:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  12:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  14:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  15:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  16:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  17:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  18:17  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  20:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/NotFound/NotFound.jsx
+   8:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+   9:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  10:13  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  10:59  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/OrderForm/OrderForm.jsx
+  103:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  104:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  105:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  111:5   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  112:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  113:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  115:21  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  117:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  118:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  126:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  134:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  142:9   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  147:7   error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/components/OrderForm/OrderSummary.jsx
+   5:32  error  'cart' is missing in props validation         react/prop-types
+   6:22  error  'cart.reduce' is missing in props validation  react/prop-types
+   9:5   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  10:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  11:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  12:15  error  'cart.map' is missing in props validation     react/prop-types
+  13:11  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  14:13  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  15:13  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  16:13  error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+  20:7   error  'React' must be in scope when using JSX       react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/context/CartContext.jsx
+    9:32  error  'children' is missing in props validation  react/prop-types
+  105:5   error  'React' must be in scope when using JSX    react/react-in-jsx-scope
+
+/home/rob/Documents/CoderHouse/101-FullStack/03-ReactJs/080-Semana08/code/Pata-Pata-Gonia/src/main.jsx
+   9:3  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+  10:5  error  'React' must be in scope when using JSX  react/react-in-jsx-scope
+
+✖ 892 problems (892 errors, 0 warnings)
+  2 errors and 0 warnings potentially fixable with the `--fix` option.
+

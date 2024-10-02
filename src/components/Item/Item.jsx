@@ -1,4 +1,4 @@
-// filename: src/components/Item/Item.jsx
+// src/components/Item/Item.jsx
 
 import { Link } from 'react-router-dom';
 import styles from './Item.module.css';

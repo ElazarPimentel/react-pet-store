@@ -1,4 +1,5 @@
-// filename: src/components/Modal/Modal.jsx
+// src/components/Modal/Modal.jsx
+
 import styles from './Modal.module.css';
 
 export function Modal({ isOpen, title, message, onConfirm, onCancel, confirmText, cancelText }) {

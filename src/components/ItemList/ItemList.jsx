@@ -1,4 +1,4 @@
-// filename: src/components/ItemList/ItemList.jsx
+// src/components/ItemList/ItemList.jsx
 
 import { Item } from '../Item/Item';
 import styles from './ItemList.module.css';
@@ -11,7 +11,7 @@ export function ItemList({ products = [] }) {
                     <Item key={product.id} {...product} />
                 ))
             ) : (
-                <p>No products available.</p>
+                <p>No hay productos disponibles.</p>
             )}
         </div>
     );

@@ -1,4 +1,4 @@
-// filename: src/components/Cart/CartPresentation.jsx
+// src/components/Cart/CartPresentation.jsx
 
 import styles from './Cart.module.css';
 
@@ -17,7 +17,7 @@ export function CartPresentation({
       {cart.length === 0 ? (
         <p>El carrito está vacío.</p>
       ) : (
-        <div>
+        <div className={styles.cartItemsContainer}>
           {cart.map((item) => (
             <div key={item.id} className={styles.cartItem}>
               <img src={item.imageUrl} alt={item.name} />
@@ -29,10 +29,6 @@ export function CartPresentation({
                   Stock disponible:{' '}
                   {stockInfo[item.id] === 0 ? '0 - Pronto nuevo stock!' : stockInfo[item.id]}
                 </p>
-                {stockInfo[item.id] === 0 && <p>Sin stock. Vuelve pronto.</p>}
-                {stockInfo[item.id] > 0 && item.quantity >= stockInfo[item.id] && (
-                  <p>No puedes agregar más de {stockInfo[item.id]} unidades.</p>
-                )}
               </div>
               <div className={styles.cartItemControls}>
                 <button onClick={() => decreaseQuantity(item)}>-</button>
@@ -48,16 +44,16 @@ export function CartPresentation({
               </div>
             </div>
           ))}
-          <div className={styles.cartSummary}>
-            <button onClick={emptyCart} className={styles.checkoutButton}>
-              Vaciar carrito
-            </button>
-            <button onClick={checkout} className={styles.checkoutButton}>
-              Finalizar compra
-            </button>
-          </div>
         </div>
       )}
+      <div className={styles.cartSummary}>
+        <button onClick={emptyCart} className={styles.checkoutButton}>
+          Vaciar carrito
+        </button>
+        <button onClick={checkout} className={styles.checkoutButton}>
+          Finalizar compra
+        </button>
+      </div>
     </div>
   );
 }

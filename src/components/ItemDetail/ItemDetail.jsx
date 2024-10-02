@@ -1,6 +1,6 @@
-// filename: src/components/ItemDetail/ItemDetail.jsx
+// src/components/ItemDetail/ItemDetail.jsx
 
-import { useState, useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { ItemCount } from '../ItemCount/ItemCount';
 import { useNavigate } from 'react-router-dom';
@@ -9,11 +9,17 @@ import styles from './ItemDetail.module.css';
 export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
   const { addToCart } = useContext(CartContext);
   const [addedToCart, setAddedToCart] = useState(false);
+  const [addError, setAddError] = useState('');
   const navigate = useNavigate();
 
-  const handleAddToCart = (quantity) => {
-    addToCart({ id, name, price, imageUrl, quantity });
-    setAddedToCart(true);
+  const handleAddToCart = async (quantity) => {
+    try {
+      await addToCart({ id, name, price, imageUrl, quantity });
+      setAddedToCart(true);
+    } catch (error) {
+      console.error('Error al agregar al carrito:', error);
+      setAddError('Hubo un error al agregar el producto al carrito.');
+    }
   };
 
   const goToCart = () => {
@@ -39,6 +45,7 @@ export function ItemDetail({ id, name, description, price, imageUrl, stock }) {
       {stock > 0 && !addedToCart && (
         <ItemCount stock={stock} initial={1} onAdd={handleAddToCart} productId={id} />
       )}
+      {addError && <p className={styles.error}>{addError}</p>}
       {addedToCart && (
         <>
           <p>Producto agregado al carrito.</p>
